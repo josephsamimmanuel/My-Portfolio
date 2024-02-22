@@ -5,7 +5,7 @@ function Home() {
   return (
     <div>
         <Header></Header>
-        <div className="introduction flex-with-center" style={{backgroundImage: `url('./introbg.svg')`}}>
+        <div className="introduction flex-with-center" style={{backgroundImage: `url('./blob-scene-haikei.svg')`}}>
         <div>
             <h1>JOSEPH SAM IMMANUEL</h1>
             <div className='intro-content d-flex gap-4'>
