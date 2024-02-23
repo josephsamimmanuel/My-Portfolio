@@ -1,5 +1,6 @@
 import React from 'react'
 import Header from '../components/Header'
+import Courosel from '../components/Courosel'
 
 function Home() {
   return (
@@ -21,6 +22,7 @@ function Home() {
             </div>
             </div>
         </div>
+        <Courosel></Courosel>
     </div>
   )
 }

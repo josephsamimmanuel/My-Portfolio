@@ -50,6 +50,15 @@ ul a{
     color: white;
     text-decoration: none;
 }
+.active{
+    border: 3px solid #52D857;
+    padding: 5px;
+    border-radius: 10px;
+}
+.active a{
+    color: #52D857;
+    font-weight: bold;
+}
 @media (max-width: 760px) {
     .show-header{
         color: white;
@@ -67,7 +76,27 @@ ul a{
         width: 100%;
         border-bottom-left-radius: 50%;
         border-top-left-radius: 50%;
+        border-left: 5px solid white;
         z-index: 2;
-        transition: all 0.5s;
+        transition: width 0.5s;
+    }
+    .hide-header{
+        color: white;
+        text-decoration: none;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        position: fixed;
+        top: 0;
+        right: 0;
+        height: 0;
+        width: 0;
+        overflow: hidden;
+        transition: width 0.5s;
+    }
+    .menu-icon{
+        color: #52D857;
+        font-size: 40px;
     }
 }

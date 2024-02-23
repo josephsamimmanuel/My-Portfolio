@@ -6,6 +6,7 @@ import Contact from '../pages/Contact';
 
 function Header() {
     const [showheader,setshowheader]=useState(false)
+    const path=window.location.pathname
   return (
     <div className='Header'>
         {showheader? (<RiCloseCircleFill 
@@ -14,10 +15,10 @@ function Header() {
         onClick={()=>{setshowheader(!showheader)}} className='menu-icon position-fixed top=0 end-0'></RiMenu3Fill>)}
         
         <ul className={`${showheader?'show-header':'hide-header'} n-box1`}>
-            <li> <Link to={'/'}>Home</Link> </li>
-            <li> <Link to={'/projects'}>Projects</Link> </li>
-            <li> <Link to={'/courses'}>Courses</Link> </li>
-            <li> <Link to={'./contact'}>Contact Me</Link> </li>
+            <li className={`${path=='/' && 'active'}`}> <Link to={'/'}>Home</Link> </li>
+            <li className={`${path=='/projects' && 'active'}`}> <Link to={'/projects'}>Projects</Link> </li>
+            <li className={`${path=='/courses' && 'active'}`}> <Link to={'/courses'}>Courses</Link> </li>
+            <li className={`${path=='/contact' && 'active'}`}> <Link to={'./contact'}>Contact Me</Link> </li>
         </ul>
         </div>
   )

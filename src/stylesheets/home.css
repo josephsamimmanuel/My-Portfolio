@@ -31,12 +31,15 @@
     margin-left: 10%;
     margin-right: 10%;
 }
+.introduction-container-about p{
+    text-align: center;
+}
 .primary-button{
     background-color: #52D857;
     height: 50px;
     border-radius: 20px;
     border: none;
-    width: 10%;
+    width: 13%;
 }
 .primary-button:hover{
     background-color: white;
@@ -52,7 +55,7 @@
 @media (max-width: 760px) {
     .introduction div h1{
         color: #ffffff;
-        font-size: 22px;
+        font-size: 30px;
         margin-left: 15px;
     }
 
@@ -69,11 +72,11 @@
     }
     .intro-content p{
         margin-left: 16px;
-        font-size: 13px;
+        font-size: 15px;
     }
     .introduction-container-about p{
-        font-size: 11px;
-        text-align: justify;
+        font-size: 12px;
+        text-align: center;
         padding-bottom: 20px;    }
     .introduction-container-about i{
         font-size: medium;
