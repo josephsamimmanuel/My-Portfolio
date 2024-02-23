@@ -100,7 +100,7 @@ function Home() {
 
         <div className='py-5'>
           <h3 className='font-bold text-center'>Who is Joseph?</h3>
-        <div className="who-am-i flex-with-center" style={{backgroundImage:`url('who_am_i.svg')`}}>
+        <div className="who-am-i flex-with-center" style={{backgroundImage:`url('blob-haikei.svg')`}}>
 
         <div>
           <h1>Hi, Hello</h1>
