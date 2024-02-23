@@ -48,7 +48,7 @@ function Home() {
           <div className="row pt-5 justify-content-end py-2">
             <div className="col-md-4">
               <div className='n-box2 p-5 font-bold'>
-                <p>JavaScript is one of the most top-ranked programming Languages because of its ubiquitous use on all platforms and mass adoption. Main Use Cases: Web Development</p>
+                <p>Javascript is one of the most top-ranked programming Languages because of its ubiquitous use on all platforms and mass adoption. Main Use Cases: Web Development</p>
               </div>
             </div>
           </div>
