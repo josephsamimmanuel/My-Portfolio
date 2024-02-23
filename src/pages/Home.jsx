@@ -53,6 +53,70 @@ function Home() {
             </div>
           </div>
         </div>
+
+        <div className="devstack container mt-5 py-5 px-5">
+          <div className='text-center'>
+          <h3 className='font-bold text-center'>My Development Stack</h3>
+          <hr />
+          <img src="./developer.svg" height='200' width='200' alt="" />
+          </div>
+          <div className="row">
+
+          <div className="col-md-4">
+            <div className=' text-left'>
+              <h3 className='font-bold'>Front-End</h3>
+              <hr />
+              <p>HTML</p>
+              <p>CSS</p>
+              <p>JavaScript</p>
+              <p>React.Js</p>
+            </div>
+          </div>
+
+          <div className="col-md-4">
+            <div className=' text-center'>
+              <h3 className='font-bold '>UI/Styling</h3>
+              <hr />
+              <p>Tailwind CSS</p>
+              <p>BootStrap</p>
+              
+            </div>
+          </div>
+
+          <div className="col-md-4">
+            <div className=' text-end'>
+              <h3 className='font-bold'>Back-End</h3>
+              <hr />
+              <p>Node.Js</p>
+              <p>MySQL</p>
+              <p>MongoDB</p>
+              <p>Express.Js</p>
+            </div>
+          </div>
+        </div>
+          
+        </div>
+
+
+        <div className='py-5'>
+          <h3 className='font-bold text-center'>Who is Joseph?</h3>
+        <div className="who-am-i flex-with-center" style={{backgroundImage:`url('who_am_i.svg')`}}>
+
+        <div>
+          <h1>Hi, Hello</h1>
+          <hr />
+          <p><pre>{JSON.stringify({
+            name:"S.Joseph Sam Immanuel",
+            from:"India",
+            age:"31",
+            gender:"Male",
+          }, null, 2)}</pre></p>
+        </div>      
+
+        </div>
+        </div>
+
+
     </div>
   )
 }

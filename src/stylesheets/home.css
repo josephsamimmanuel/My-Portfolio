@@ -50,6 +50,34 @@
     display: flex;
     justify-content: center;
 }
+.devstack{
+    color: black;
+    background-color: #EBECF0;
+   border: #D6D7DA 3px solid;
+   border-radius: 50px;
+   transition: all 0.5s;
+
+}
+.devstack:hover{
+    color: #52D857;
+   background-color: #001220;
+    border-radius: 50px;
+    transform: scale(1.05);
+}
+.who-am-i{
+    height: 75vh;
+    background-size: 100% 100%;
+    color: #52D857;
+    transition: all 0.5s;
+}
+.who-am-i:hover{
+    transform: scale(1.05);
+    overflow: hidden !important;
+}
+pre{
+    font-size: 15px;
+    font-family: "Poppins", sans-serif !important;
+}
 
 
 @media (max-width: 760px) {
@@ -82,6 +110,15 @@
         font-size: medium;
         
     }
-
+    .who-am-i{
+        height: 100vh;
+        background-size: 180% 100%;
+        color: #52D857;
+        background-position: center;
+    }
+    pre{
+        font-size: 16px;
+        font-family: "Poppins", sans-serif;
+    }
 
 }
