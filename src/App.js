@@ -8,6 +8,7 @@ import {BrowserRouter, Route, Routes} from 'react-router-dom'
 import React from 'react';
 import './stylesheets/home.css'
 import './stylesheets/header-footer.css'
+import './stylesheets/courosel.css'
 
 function App() {
   return (
