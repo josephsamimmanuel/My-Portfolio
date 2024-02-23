@@ -1,5 +1,5 @@
 .menu-icon{
-    color: #FBAE3C;
+    color: #52D857;
     font-size: 70px;
     margin: 20px;
     z-index: 3;
@@ -49,4 +49,25 @@ ul li{
 ul a{
     color: white;
     text-decoration: none;
+}
+@media (max-width: 760px) {
+    .show-header{
+        color: white;
+        text-decoration: none;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        position: fixed;
+        top: 0;
+        right: 0;
+        background-color: #001220;
+        opacity: 0.9;
+        height: 100vh;
+        width: 100%;
+        border-bottom-left-radius: 50%;
+        border-top-left-radius: 50%;
+        z-index: 2;
+        transition: all 0.5s;
+    }
 }
