@@ -32,7 +32,7 @@
     transform-style: preserve-3d;
     transform-origin:center;
     transform: rotateY(calc(var(--i) * 45deg)) translateZ(400px);
-    transition: all 1s;
+    transition: all 2s;
 }
 
 .gallery span svg{
@@ -43,7 +43,7 @@
     left: 0;
     object-fit: cover;
     -webkit-box-reflect: below 1px linear-gradient(transparent , transparent , rgba(0, 0, 0, 0.164));
-    transition: all 1s;
+    transition: all 2s;
 }
 
 .gallery span svg:hover{
