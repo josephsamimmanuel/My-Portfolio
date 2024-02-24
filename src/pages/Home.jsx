@@ -105,9 +105,9 @@ function Home() {
       <h1>Vision</h1>
       <p>Launching my career: Gaining a Fresh Perspective on Full Stack Development.</p>
 
-        <div className="row justify-content-center py-4">
+      <div className="row justify-content-center py-4 px-3">
           <div className="col-md-4">
-            <div className='n-box2 p-3'>
+            <div className='n-box2 p-5 font-bold'>
               <h6 className='container-visionary-h6'>About Me</h6>
               <i style={{ color: `black` }} class="fa-solid fa-quote-left "></i>
               <p className='container-visionary-p'>As a fresher in web development, I am passionate about crafting web experiences that stand out, ensuring every detail exudes style and magic. I enjoy taking on complex challenges, and this excitement propels my journey toward becoming a full-stack wizard. The prospect of working with a dynamic team and learning from experienced professionals is incredibly thrilling. I am eager to enhance my skills in this ever-evolving field.</p>
@@ -115,9 +115,9 @@ function Home() {
           </div>
         </div>
 
-        <div className="row pt-5 justify-content-center py-2">
+        <div className="row justify-content-center py-4 px-3">
           <div className="col-md-4">
-          <div className='n-box2 p-3'>
+            <div className='n-box2 p-5 font-bold'>
               <h6 className='container-visionary-h6'>Reason to Hire Me</h6>
               <i style={{ color: `black` }} class="fa-solid fa-quote-left "></i>
               <p className='container-visionary-p'>I'm a budding Full Stack Developer with a passion for crafting amazing user experiences. I dive into each project with new perspectives, a ton of ambition, and a touch of unconventional thinking. My goal is to work magic in the digital realm through energetic and innovative efforts. Let's connect and collaborate to breathe life into unique, ambitious, and engaging experiences!</p>
