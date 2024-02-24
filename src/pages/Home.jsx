@@ -40,7 +40,7 @@ function Home() {
           <div className="row pt-5 justify-content-center">
             <div className="col-md-4">
               <div>
-                <img src="./jsbuff.svg" alt="Javascript_SVG" height="200"className='w-100' />
+                <img src="./jsbuff.svg" alt="Javascript_SVG" height="300" width="300" className='w-100' />
               </div>
             </div>
           </div>
@@ -98,7 +98,7 @@ function Home() {
         </div>
 
 
-        <div className='py-5'>
+        <div className='text py-5'>
           <h3 className='font-bold text-center'>Who is Joseph?</h3>
         <div className="who-am-i flex-with-center" style={{backgroundImage:`url('blob-haikei.svg')`}}>
 

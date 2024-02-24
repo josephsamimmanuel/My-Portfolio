@@ -64,6 +64,10 @@
     border-radius: 50px;
     transform: scale(1.05);
 }
+.text h3{
+    color: black;
+    font-size: 40px;
+}
 .who-am-i{
     height: 75vh;
     background-size: 100% 100%;
@@ -123,6 +127,10 @@ pre{
     .container div div div h1{
         font-size: 25px;
         font-weight: bold;
+    }
+    .text h3{
+        padding-top: 20px;
+        font-size: 40px;
     }
     .devstack div h3{
         font-size: 21px;

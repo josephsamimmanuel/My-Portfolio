@@ -6,7 +6,9 @@
     align-items: center;
     justify-content: center;
 }
-
+.courosel-parent h1{
+    padding-top: 20px;
+}
 .gallery{
     height: 200px;
     width: 200px;
