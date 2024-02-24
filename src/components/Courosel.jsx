@@ -4,10 +4,10 @@ import { SiTailwindcss } from "react-icons/si";
 import { FaGithub } from "react-icons/fa";
 import { SiMysql } from "react-icons/si";
 
+
 function Courosel() {
   return (
     <div>
-
         <div className='courosel-parent position-relative'>
         <h1 className='position-absolute top-0 start-0 end-0 text-center mt-5'>Technologies I Use</h1>
         <div className='gallery'>
@@ -43,9 +43,14 @@ function Courosel() {
         <span style={{'--i' :8}}>
           <SiMysql color='#F29221'></SiMysql>
         </span>
+        </div>
+
+
 
         </div>
-        </div>
+
+
+
     </div>
   )
 }

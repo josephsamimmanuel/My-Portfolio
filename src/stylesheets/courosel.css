@@ -6,9 +6,7 @@
     align-items: center;
     justify-content: center;
 }
-.courosel-parent h1{
-    padding-top: 20px;
-}
+
 .gallery{
     height: 200px;
     width: 200px;
@@ -34,7 +32,7 @@
     transform-style: preserve-3d;
     transform-origin:center;
     transform: rotateY(calc(var(--i) * 45deg)) translateZ(400px);
-    transition: all 2s;
+    transition: all 1s;
 }
 
 .gallery span svg{
@@ -45,7 +43,7 @@
     left: 0;
     object-fit: cover;
     -webkit-box-reflect: below 1px linear-gradient(transparent , transparent , rgba(0, 0, 0, 0.164));
-    transition: all 2s;
+    transition: all 1s;
 }
 
 .gallery span svg:hover{

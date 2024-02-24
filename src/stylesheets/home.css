@@ -82,6 +82,28 @@ pre{
     font-size: 15px;
     font-family: "Poppins", sans-serif !important;
 }
+.container-visionary{
+    background-color: #001220;
+    color: white;
+    padding-top: 30px;
+    padding-bottom: 70px;
+    
+}
+.container-visionary h1, .container-visionary p{
+    text-align: center;
+    padding-top: 10px;
+    
+}
+.container-visionary-p{
+    color: black;
+    font-size: 14px;
+}
+.container-visionary-h6{
+    color: black;
+    font-weight: bold;
+    text-align: center;
+    text-decoration: underline;
+}
 
 
 @media (max-width: 760px) {

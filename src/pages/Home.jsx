@@ -5,62 +5,64 @@ import Courosel from '../components/Courosel'
 function Home() {
   return (
     <div>
-        <Header></Header>
-        <div className="introduction flex-with-center" style={{backgroundImage: `url('./blob-scene-haikei.svg')`}}>
+      <Header></Header>
+      <div className="introduction flex-with-center" style={{ backgroundImage: `url('./blob-scene-haikei.svg')` }}>
         <div className='introduction-container'>
-            <div>
+          <div>
             <h1>JOSEPH SAM IMMANUEL</h1>
-            </div>
-            <div className='intro-content d-flex gap-2'>
+          </div>
+          <div className='intro-content d-flex gap-2'>
             <p >MERN Stack Developer, <br />Freelancer</p>
             <button className='primary-button font-bold'>Get Started</button>
-            </div>
-            
-            <div className='introduction-container-about'>
-            <i style={{color: `#52D857`}} class="fa-solid fa-quote-left large fa-3x"></i>
-           <p>MERN Stack Developer with expertise in HTML5, CSS3, React.js, and Node.js, showcasing a blend of frontend and backend skills. Proficient in API integration, MySQL, and MongoDB for robust data management. Adept at version control using GitHub. Let's Connect !</p>
-            </div>
-            </div>
+          </div>
+
+          <div className='introduction-container-about'>
+            <i style={{ color: `#52D857` }} class="fa-solid fa-quote-left large fa-3x"></i>
+            <p>MERN Stack Developer with expertise in HTML5, CSS3, React.js, and Node.js, showcasing a blend of frontend and backend skills. Proficient in API integration, MySQL, and MongoDB for robust data management. Adept at version control using GitHub. Let's Connect !</p>
+          </div>
         </div>
+      </div>
+      <div>
+      {/* <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="#52D857" fill-opacity="1" d="M0,224L80,197.3C160,171,320,117,480,128C640,139,800,213,960,245.3C1120,277,1280,267,1360,261.3L1440,256L1440,320L1360,320C1280,320,1120,320,960,320C800,320,640,320,480,320C320,320,160,320,80,320L0,320Z"></path></svg> */}
+
         <Courosel></Courosel>
-        <div>
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="#001220" fill-opacity="1" d="M0,256L40,224C80,192,160,128,240,101.3C320,75,400,85,480,106.7C560,128,640,160,720,154.7C800,149,880,107,960,128C1040,149,1120,235,1200,240C1280,245,1360,171,1400,133.3L1440,96L1440,0L1400,0C1360,0,1280,0,1200,0C1120,0,1040,0,960,0C880,0,800,0,720,0C640,0,560,0,480,0C400,0,320,0,240,0C160,0,80,0,40,0L0,0Z"></path></svg>
-        </div>
-        <div className="container">
+      </div>
+      <div className="container">
 
-          <div className="row justify-content-start">
-            <div className="col-md-4">
-              <div className='n-box2 p-5 font-bold'>
-                <h1>Yes you are Right..</h1> <br></br>
-                <p>I am a JavaScript Buff</p>
-              </div>
-            </div>
-          </div>
-
-          <div className="row pt-5 justify-content-center">
-            <div className="col-md-4">
-              <div>
-                <img src="./jsbuff.svg" alt="Javascript_SVG" height="300" width="300" className='w-100' />
-              </div>
-            </div>
-          </div>
-
-          <div className="row pt-5 justify-content-end py-2">
-            <div className="col-md-4">
-              <div className='n-box2 p-5 font-bold'>
-                <p>Javascript is one of the most top-ranked programming Languages because of its ubiquitous use on all platforms and mass adoption. Main Use Cases: Web Development</p>
-              </div>
+        <div className="row justify-content-start">
+          <div className="col-md-4">
+            <div className='n-box2 p-5 font-bold'>
+              <h1>Yes you are Right..</h1> <br></br>
+              <p>I am a JavaScript Buff</p>
             </div>
           </div>
         </div>
 
-        <div className="devstack container mt-5 py-5 px-5">
-          <div className='text-center'>
+        <div className="row pt-5 justify-content-center">
+          <div className="col-md-4">
+            <div>
+              <img src="./jsbuff.svg" alt="Javascript_SVG" height="300" width="300" className='w-100' />
+            </div>
+          </div>
+        </div>
+
+        <div className="row pt-5 justify-content-end py-2">
+          <div className="col-md-4">
+            <div className='n-box2 p-5 font-bold'>
+              <p>Javascript is one of the most top-ranked programming Languages because of its ubiquitous use on all platforms and mass adoption. Main Use Cases: Web Development</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div className="devstack container mt-5 py-5 px-5">
+        <div className='text-center'>
           <h3 className='font-bold text-center'>My Development Stack</h3>
           <hr />
           <img src="./developer.svg" height='200' width='200' alt="" />
-          </div>
-          <div className="row">
+        </div>
+        <div className="row">
 
           <div className="col-md-4">
             <div className=' text-left'>
@@ -79,7 +81,7 @@ function Home() {
               <hr />
               <p>Tailwind CSS</p>
               <p>BootStrap</p>
-              
+
             </div>
           </div>
 
@@ -94,29 +96,56 @@ function Home() {
             </div>
           </div>
         </div>
-          
+
+      </div>
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
+  <path fill="#001220" fill-opacity="1" d="M0,192L24,186.7C48,181,96,171,144,144C192,117,240,75,288,64C336,53,384,75,432,106.7C480,139,528,181,576,181.3C624,181,672,139,720,154.7C768,171,816,245,864,261.3C912,277,960,235,1008,202.7C1056,171,1104,149,1152,128C1200,107,1248,85,1296,90.7C1344,96,1392,128,1416,144L1440,160L1440,320L1416,320C1392,320,1344,320,1296,320C1248,320,1200,320,1152,320C1104,320,1056,320,1008,320C960,320,912,320,864,320C816,320,768,320,720,320C672,320,624,320,576,320C528,320,480,320,432,320C384,320,336,320,288,320C240,320,192,320,144,320C96,320,48,320,24,320L0,320Z"></path>
+</svg>
+      <div className="container-visionary">
+      <h1>Vision</h1>
+      <p>Launching my career: Gaining a Fresh Perspective on Full Stack Development.</p>
+
+        <div className="row justify-content-center py-4">
+          <div className="col-md-4">
+            <div className='n-box2 p-3'>
+              <h6 className='container-visionary-h6'>About Me</h6>
+              <i style={{ color: `black` }} class="fa-solid fa-quote-left "></i>
+              <p className='container-visionary-p'>As a fresher in web development, I am passionate about crafting web experiences that stand out, ensuring every detail exudes style and magic. I enjoy taking on complex challenges, and this excitement propels my journey toward becoming a full-stack wizard. The prospect of working with a dynamic team and learning from experienced professionals is incredibly thrilling. I am eager to enhance my skills in this ever-evolving field.</p>
+            </div>
+          </div>
         </div>
 
+        <div className="row pt-5 justify-content-center py-2">
+          <div className="col-md-4">
+          <div className='n-box2 p-3'>
+              <h6 className='container-visionary-h6'>Reason to Hire Me</h6>
+              <i style={{ color: `black` }} class="fa-solid fa-quote-left "></i>
+              <p className='container-visionary-p'>I'm a budding Full Stack Developer with a passion for crafting amazing user experiences. I dive into each project with new perspectives, a ton of ambition, and a touch of unconventional thinking. My goal is to work magic in the digital realm through energetic and innovative efforts. Let's connect and collaborate to breathe life into unique, ambitious, and engaging experiences!</p>
+            </div>
+          </div>
+        </div>
+        
+      </div>
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="#001220" fill-opacity="1" d="M0,256L40,224C80,192,160,128,240,101.3C320,75,400,85,480,106.7C560,128,640,160,720,154.7C800,149,880,107,960,128C1040,149,1120,235,1200,240C1280,245,1360,171,1400,133.3L1440,96L1440,0L1400,0C1360,0,1280,0,1200,0C1120,0,1040,0,960,0C880,0,800,0,720,0C640,0,560,0,480,0C400,0,320,0,240,0C160,0,80,0,40,0L0,0Z"></path></svg>
 
-        <div className='text py-5'>
-          <h3 className='font-bold text-center'>Who is Joseph?</h3>
-        <div className="who-am-i flex-with-center" style={{backgroundImage:`url('blob-haikei.svg')`}}>
-
-        <div>
-          <h1>Hi, Hello</h1>
-          <hr />
-          <p><pre>{JSON.stringify({
-            name:"S.Joseph Sam Immanuel",
-            from:"India",
-            age:"31",
-            gender:"Male",
-          }, null, 2)}</pre></p>
-        </div>      
+      <div className='text py-5'>
+        <h3 className='font-bold text-center'>Who is Joseph?</h3>
+        <div className="who-am-i flex-with-center" style={{ backgroundImage: `url('blob-haikei.svg')` }}>
+          <div>
+            <h1>Hi, Hello</h1>
+            <hr />
+            <p><pre>{JSON.stringify({
+              name: "S.Joseph Sam Immanuel",
+              from: "India",
+              age: "31",
+              gender: "Male",
+            }, null, 2)}</pre></p>
+          </div>
 
         </div>
-        </div>
+      </div>
 
-
+      
     </div>
   )
 }
