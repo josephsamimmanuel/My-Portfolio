@@ -83,7 +83,7 @@ pre{
 @media (max-width: 760px) {
     .introduction div h1{
         color: #ffffff;
-        font-size: 30px;
+        font-size: 28px;
         margin-left: 15px;
     }
 
@@ -117,8 +117,15 @@ pre{
         background-position: center;
     }
     pre{
-        font-size: 16px;
+        font-size: 13px;
         font-family: "Poppins", sans-serif;
+    }
+    .container div div div h1{
+        font-size: 25px;
+        font-weight: bold;
+    }
+    .devstack div h3{
+        font-size: 21px;
     }
 
 }

@@ -64,3 +64,25 @@
     }
 
 }
+
+@media (max-width: 760px) {
+    .gallery{
+        height: 100px;
+        width: 100px;
+        position: relative;
+        transform-style: preserve-3d;
+        animation: gallery 20s linear infinite;
+    }
+    
+.gallery span{
+    height: 90%;
+    width: 90%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    transform-style: preserve-3d;
+    transform-origin:center;
+    transform: rotateY(calc(var(--i) * 45deg)) translateZ(170px);
+    transition: all 2s;
+}
+}
