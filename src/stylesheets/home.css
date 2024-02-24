@@ -39,7 +39,7 @@
     height: 50px;
     border-radius: 20px;
     border: none;
-    width: 13%;
+    width: 20%;
 }
 .primary-button:hover{
     background-color: white;
@@ -84,16 +84,31 @@ pre{
 }
 .container-visionary{
     background-color: #001220;
-    color: white;
+    color: #52D857;
     padding-top: 30px;
     padding-bottom: 50px;
     
 }
-.container-visionary h1, .container-visionary p{
-    text-align: center;
-    padding-top: 10px;
+.container-visionary-title{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+}
+.container-visionary h4{
+   
+    padding: 10px;
+    border: #52D857 1px solid;
+    border-radius: 25px;
     
 }
+.container-visionary p{
+    
+    padding: 10px;
+    font-weight: bold;
+}
+
 .container-visionary-p{
     color: black;
     font-size: 14px;

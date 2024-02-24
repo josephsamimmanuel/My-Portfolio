@@ -98,5 +98,6 @@ ul a{
     .menu-icon{
         color: #52D857;
         font-size: 40px;
+        z-index: 3;
     }
 }

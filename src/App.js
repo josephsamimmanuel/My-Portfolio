@@ -9,6 +9,7 @@ import React from 'react';
 import './stylesheets/home.css'
 import './stylesheets/header-footer.css'
 import './stylesheets/courosel.css'
+import './stylesheets/projects-courses.css'
 
 function App() {
   return (
