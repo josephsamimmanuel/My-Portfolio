@@ -55,7 +55,7 @@
 {
     width: 50%;
     color: white;
-    border-left: 5px solid cyan;
+    border-left: 5px solid #52D857;
     padding-left: 30px;
     animation: courses-intro-animation 10s linear infinite;
 }
@@ -63,14 +63,43 @@
     font-size: 75px;
     -webkit-text-fill-color: transparent;
     -webkit-text-stroke-width: 2px;
-    -webkit-text-stroke-color: cyan;
-    border-bottom: 2px solid white;
+    -webkit-text-stroke-color: #52D857;
+    border-bottom: 2px solid #52D857;
 }
 .courses-intro-content p{
-
-
     border-right: 2px solid white;
 }
+.container-education{
+    padding: 20px;
+    color: white;
+    border-radius: 50px;
+    background-color: #001220;
+    box-shadow:  5px 5px 0px #d6d7da,
+                 -5px -5px 0px #ffffff;
+}
+.container-education-p{
+    color: white;
+    font-size: 14px;
+}
+.container-education-h5{
+    color: #52D857;
+    font-weight: bold;
+}
+.container-education-skills{
+    display: inline-block;
+    border: #52D857 solid 1px;
+    padding-top: 2px;
+    padding-bottom: 2px;
+    padding-left: 10px;
+    padding-right: 10px;
+    border-radius: 20px;
+    margin: 5px;
+    color: #52D857;
+}
+.container-education-style{
+    color: #52D857;
+}
+
 @keyframes project-animation{
     0%{
         transform: rotate(-5deg);
@@ -112,11 +141,11 @@
     .courses-intro-content{
         width: 100%;
         color: white;
-        border-left: 5px solid cyan;
+        border-left: 5px solid #52D857;
         padding: 20px;
         margin: 20px;
         border-left: none;
-        border-left: 2px solid white;
+        border-left: 2px solid #52D857;
     }
     .courses-intro-content h1{
         font-size: 35px;

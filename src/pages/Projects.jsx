@@ -40,7 +40,8 @@ function Projects() {
                   <h1>{project.title}</h1>
                   <hr />
                   <p>{project.description}</p>
-                  <button className='primary-button'>View Me</button>
+                  {/* <button className="primary-button projects-btn"><a href={project.link} className='white'>Get Started</a></button> */}
+                  <button className='primary-button'><a style={{color:"black", textDecoration:"none"}} href={project.link}>View Me</a></button>
                 </div>
                 </div>
                 </div>)

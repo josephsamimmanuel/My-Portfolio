@@ -1,39 +1,39 @@
 const projectsdata=[
     {
-        title:"JOSEPH",
-        image:"./ecommerce.svg",
-        description:"An E-Commerce Application developed using react,node,redux and mongoDB",
-        link:"/"
+        title:"BULK MAIL APP",
+        image:"./Bulk_mail.png",
+        description:"A Bulk-Mail Application developed using react, node and mongoDB",
+        link:"https://bulk-mail-app.vercel.app/"
     },
     {
-        title:"JOSEPH",
-        image:"./pizzas.svg",
-        description:"An E-Commerce Application developed using react,node,redux and mongoDB",
-        link:"/"
+        title:"ACTIVITY TRACKER",
+        image:"./Actodo.png",
+        description:"An Activity Tracker Application developed using react, react hook:useContext, Routers",
+        link:"https://actodoo.vercel.app/"
     },
     {
-        title:"JOSEPH",
-        image:"./hotels.svg",
-        description:"An E-Commerce Application developed using react,node,redux and mongoDB",
-        link:"/"
+        title:"WEATHER_TRACKER",
+        image:"./Weather_App.png",
+        description:"A Weather Monitoring Application developed using react and API",
+        link:"https://designed-weather-app.vercel.app/"
     },
     {
-        title:"JOSEPH",
-        image:"./cars.svg",
-        description:"An E-Commerce Application developed using react,node,redux and mongoDB",
-        link:"/"
+        title:"NOSTRA",
+        image:"./Nostra.png",
+        description:"An E-Commerce Application developed using HTML, CSS, Bootstrap and Javascript",
+        link:"https://josephsamimmanuel.github.io/Nostra-Ecommerce-site/"
     },
     {
-        title:"JOSEPH",
-        image:"./socialmedia.svg",
-        description:"An E-Commerce Application developed using react,node,redux and mongoDB",
-        link:"/"
+        title:"UDEMY_CLONE",
+        image:"./Udemy_clone.png",
+        description:"An E-Commerce Application developed using HTML, CSS, Bootstrap and Javascript",
+        link:"https://josephsamimmanuel.github.io/Udemy-Clone/"
     },
     {
-        title:"JOSEPH",
-        image:"./stripe.svg",
-        description:"An E-Commerce Application developed using react,node,redux and mongoDB",
-        link:"/"
+        title:"BMI CALCULATOR",
+        image:"BMI_Calculator.png",
+        description:"An E-Commerce Application developed using HTML, CSS, Bootstrap and Javascript",
+        link:"https://josephsamimmanuel.github.io/BMI-calculator/"
     }
 ]
 export default projectsdata

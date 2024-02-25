@@ -53,10 +53,11 @@
 .devstack{
     color: black;
     background-color: #EBECF0;
-   border: #D6D7DA 3px solid;
    border-radius: 50px;
    transition: all 0.5s;
-
+   border-radius: 50px;
+   box-shadow:  5px 5px 0px #d6d7da,
+                -5px -5px 0px #ffffff;
 }
 .devstack:hover{
     color: #52D857;
