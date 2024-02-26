@@ -13,7 +13,7 @@ function Courses() {
         <div className='courses-intro-content'>
           <div>
             <h1>Educational Details</h1>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit in ad at odit dignissimos assumenda nobis itaque repudiandae minima ut?</p>
+            <p>Sharing my educational details. Excited to showcase my academic journey and achievements. Feel free to explore my educational background.</p>
             <button className='primary-button' style={{ fontWeight: 'bold' }}> <a style={{color:"black", textDecoration:"none"}} href="#education">Get Started</a> </button>
           </div>
         </div>
