@@ -75,6 +75,10 @@
     color: #52D857;
     transition: all 0.5s;
 }
+.who-am-i h3{
+    color: #52D857;
+    font-size: 20px;
+}
 .who-am-i:hover{
     transform: scale(1.05);
     overflow: hidden !important;
@@ -157,6 +161,11 @@ pre{
         background-size: 180% 100%;
         color: #52D857;
         background-position: center;
+        
+    }
+    .who-am-i h3{
+        color: #52D857;
+        font-size: 20px !important;
     }
     pre{
         font-size: 13px;

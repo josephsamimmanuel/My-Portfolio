@@ -35,8 +35,8 @@ function Home() {
         <div className="row justify-content-start">
           <div className="col-md-4">
             <div className='n-box2 p-5 font-bold'>
-              <h1>Yes you are Right..</h1> <br></br>
-              <p>I am a JavaScript Buff</p>
+              
+              <p>React.js isn't just a library; it's my love language for building beautiful, engaging, and responsive web experiences.</p>
             </div>
           </div>
         </div>
@@ -52,7 +52,7 @@ function Home() {
         <div className="row pt-5 justify-content-end py-2">
           <div className="col-md-4">
             <div className='n-box2 p-5 font-bold'>
-              <p>Javascript is one of the most top-ranked programming Languages because of its ubiquitous use on all platforms and mass adoption. Main Use Cases: Web Development</p>
+              <p>React.js simplifies UI development with its declarative syntax, component-based structure, and efficient rendering, fostering a streamlined and enjoyable development experience. </p><span>Main Use Cases: Web Development</span> 
             </div>
           </div>
         </div>
@@ -135,13 +135,13 @@ function Home() {
         <h3 className='font-bold text-center'>Who is Joseph?</h3>
         <div className="who-am-i flex-with-center" style={{ backgroundImage: `url('blob-haikei.svg')` }}>
           <div>
-            <h1>Hi, Hello</h1>
+            <h3>DevEnthusiast</h3>
             <hr />
             <p><pre>{JSON.stringify({
-              name: "S.Joseph Sam Immanuel",
-              from: "India",
-              age: "31",
-              gender: "Male",
+              L1: "while energy_level > 0:",
+              L2: "write_code()",
+              L3: "debug_errors()",
+              L4: "repeat()",
             }, null, 2)}</pre></p>
           </div>
 
