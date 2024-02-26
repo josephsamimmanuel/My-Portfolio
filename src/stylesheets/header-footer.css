@@ -2,7 +2,34 @@
     color: #52D857;
     font-size: 70px;
     margin: 20px;
+    cursor: pointer;
     z-index: 3;
+}
+.Header-p{
+    color: #52D857;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 17px;
+    margin-left: 25vw;
+    position: fixed;
+    top: 17px;
+    left: 0px;      
+}
+.Header-p p{
+    border: #52D857 1px solid; 
+    margin:20px;
+    padding-left: 10px;padding-right: 10px;
+    padding-top: 5px; padding-bottom: 5px;
+    border-radius: 20px;
+    background-color: #001220;
+    z-index: 1;
+}
+.Header-p p a{
+    text-decoration: none;
+    color: #52D857;
+}
+.Header-p p:hover{
     cursor: pointer;
 }
 .show-header{
@@ -99,5 +126,11 @@ ul a{
         color: #52D857;
         font-size: 40px;
         z-index: 3;
+    }
+    .Header-p{
+display: none;     
+    }
+    .Header-p p{
+display: none;
     }
 }

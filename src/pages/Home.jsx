@@ -6,6 +6,7 @@ function Home() {
   return (
     <div>
       <Header></Header>
+
       <div className="introduction flex-with-center" style={{ backgroundImage: `url('./blob-scene-haikei.svg')` }}>
         <div className='introduction-container'>
           <div>

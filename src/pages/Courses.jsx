@@ -3,6 +3,7 @@ import Header from '../components/Header'
 
 const skills=["HTML", "HTML5", "CSS3", "Bootstrap", "TailwindCSS", "CSSFlexbox", "React.js", "Node.js", "Express.js", "version control", "GitHub", "DOM", "MongoDB", "MySQL", "API", "frontend developer", "backend developer" , "Error Handling and Debugging", "Canva", "Microsoft Excel"]
 const oldskills=["Simulink","Matlab","Mathworks","Solar PV"]
+const others=["Github","Vercel","Netlify"]
 function Courses() {
   return (
     <div>
@@ -30,6 +31,14 @@ function Courses() {
         <div>
           {
             skills.map(function(items){
+              return(<p className='container-education-skills'>{items}</p>)
+            })
+          }
+        </div>
+        <p style={{ fontWeight: "bold", color:"#52D857", textDecoration:"underline", paddingTop:"20px" }}>Others:</p>
+        <div>
+          {
+            others.map(function(items){
               return(<p className='container-education-skills'>{items}</p>)
             })
           }
