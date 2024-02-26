@@ -23,7 +23,6 @@
     padding-top: 5px; padding-bottom: 5px;
     border-radius: 20px;
     background-color: #001220;
-    z-index: 1;
 }
 .Header-p p a{
     text-decoration: none;
@@ -86,6 +85,61 @@ ul a{
     color: #52D857;
     font-weight: bold;
 }
+.contact img{
+    height: 50vh;
+    width: 100%;
+}
+.contact{
+    padding-top: 50px;
+}
+.contact-input{
+    background-color: #DFE0E3;
+}
+.contact-input h1{
+    font-size: xx-large;
+}
+input, textarea{
+    margin-top: 25px;
+    border: none !important;
+
+}
+.form-control{
+    box-shadow: none !important;
+    border-radius: 10px;
+    box-shadow:  5px 5px 0px #d6d7da,
+                 -5px -5px 0px #ffffff;
+}
+.form-control:hover{
+    transform: scale(1.02);
+}
+.contact button{
+    background-color: rgba(0, 0, 255, 0.892);
+    color: white;
+    font-weight: bold;
+    padding: 10px;
+    padding-left: 20px; padding-right: 20px;
+    margin-top: 20px;
+    border-radius: 25px;
+}
+.footer-content{
+    background-color: #001220;
+    text-align: center;
+    color: white;
+}
+.footer-content p{
+    font-size: 25px;
+
+}
+.footer-content svg{
+    font-size: 2em;
+    color: white;
+}
+.footer-content svg:hover{
+    color: cyan;
+    transform: scale(1.05);
+    cursor: pointer;
+}
+
 @media (max-width: 760px) {
     .show-header{
         color: white;
@@ -132,5 +186,13 @@ display: none;
     }
     .Header-p p{
 display: none;
+    }
+    .contact{
+        padding-top: 0px !important;
+        margin-top: 0 !important;
+    }
+    .contact-form{
+        padding: 15px !important;
+        margin: 15px !important;
     }
 }
