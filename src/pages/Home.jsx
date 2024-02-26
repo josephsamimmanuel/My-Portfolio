@@ -100,13 +100,15 @@ function Home() {
         </div>
 
       </div>
+      <div style={{backgroundColor:""}}>
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
   <path fill="#001220" fill-opacity="1" d="M0,192L24,186.7C48,181,96,171,144,144C192,117,240,75,288,64C336,53,384,75,432,106.7C480,139,528,181,576,181.3C624,181,672,139,720,154.7C768,171,816,245,864,261.3C912,277,960,235,1008,202.7C1056,171,1104,149,1152,128C1200,107,1248,85,1296,90.7C1344,96,1392,128,1416,144L1440,160L1440,320L1416,320C1392,320,1344,320,1296,320C1248,320,1200,320,1152,320C1104,320,1056,320,1008,320C960,320,912,320,864,320C816,320,768,320,720,320C672,320,624,320,576,320C528,320,480,320,432,320C384,320,336,320,288,320C240,320,192,320,144,320C96,320,48,320,24,320L0,320Z"></path>
 </svg>
+</div>
       <div className="container-visionary">
         <div className='container-visionary-title'>
       <h4>Vision</h4>
-      <p>Launching my career: Gaining a Fresh Perspective on Full Stack Development.</p>
+      <p>Launching my career: Gaining a Fresh Perspective on Full Stack Development</p>
       </div>
       <div className="container-visionary-one row justify-content-center py-4 px-3">
           <div className="col-md-4">
