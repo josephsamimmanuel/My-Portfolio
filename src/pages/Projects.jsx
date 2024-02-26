@@ -2,6 +2,7 @@ import React from 'react'
 import Header from '../components/Header'
 import { FaLaptopCode } from "react-icons/fa";
 import projectsdata from './projectsdata';
+import Footer from '../components/Footer';
 
 function Projects() {
   return (
@@ -12,7 +13,7 @@ function Projects() {
             <div className="col-md-6 n-box2 px-3 py-5">
               <h1 className='font-bold'>Projects</h1>
               <p className='font-bold'>Good Ideas are not adopted automatically. They must be driven into practice with courageous patience</p>
-              <button className='primary-button'>Get Started</button>
+              <button className='primary-button'> <a style={{color:"white", textDecoration:"none"}} href="#projects">Get Started</a> </button>
             </div>
             <div className="col-md-6 position-relative">
             <svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
@@ -26,7 +27,7 @@ function Projects() {
           </div>
         </div>
 
-        <div className="container projects-list">
+        <div className="container projects-list" id='projects'>
           <h3 className='font-bold'>Take a Look of my Project</h3>
           <hr />
 
@@ -49,6 +50,7 @@ function Projects() {
         </div>
 
         </div>
+        <Footer></Footer>
     </div>
   )
 }

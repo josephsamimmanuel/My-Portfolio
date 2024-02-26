@@ -1,6 +1,7 @@
 import React from 'react'
 import Header from '../components/Header'
 import Courosel from '../components/Courosel'
+import Footer from '../components/Footer'
 
 function Home() {
   return (
@@ -10,11 +11,11 @@ function Home() {
       <div className="introduction flex-with-center" style={{ backgroundImage: `url('./blob-scene-haikei.svg')` }}>
         <div className='introduction-container'>
           <div>
-            <h1>JOSEPH SAM IMMANUEL</h1>
+            <h1 data-aos='fade-right'>JOSEPH SAM IMMANUEL</h1>
           </div>
           <div className='intro-content d-flex gap-2'>
             <p >MERN Stack Developer, <br />Freelancer</p>
-            <button className='primary-button font-bold'>Get Started</button>
+            <button className='primary-button font-bold'> <a style={{color:"black", textDecoration:"none"}} href="#courosel">Get Started</a> </button>
           </div>
 
           <div className='introduction-container-about'>
@@ -146,7 +147,7 @@ function Home() {
 
         </div>
       </div>
-
+      <Footer></Footer>
       
     </div>
   )

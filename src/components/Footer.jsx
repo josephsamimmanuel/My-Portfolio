@@ -10,16 +10,18 @@ function Footer() {
         <div className="row justify-content-center footer-content">
             <div className="col-md-6">
                 <div>
-                    <p>Designed and Developed by</p> <br />
+                    <p className='footer-content-p'>Designed with React</p> 
                     <hr />
                     <div className='d-flex justify-content-between'>
-                        <FaInstagram></FaInstagram>
-                        <FaFacebook></FaFacebook>
-                        <FaLinkedin></FaLinkedin>
-                        <FaGithub></FaGithub>
+                   <a href="https://www.instagram.com/josesamimmanuel/"> <FaInstagram></FaInstagram>  </a>     
+                    <a href="https://www.facebook.com/joseph.immanuel.12/"><FaFacebook></FaFacebook></a>    
+                    <a href="https://www.linkedin.com/in/josephsamimmanuel/"><FaLinkedin></FaLinkedin></a>    
+                    <a href="https://github.com/josephsamimmanuel"> <FaGithub></FaGithub></a>   
                     </div>
-                    <hr /> <br />
-                    <p>@Joseph Sam Immanuel</p>
+                    <hr />
+                    <p> &copy; {new Date().getFullYear()} Developed by Joseph Sam Immanuel </p>
+                    <p>Email: immanueljosephsam@gmail.com</p>
+                    <p>Contact me: +91 638 175 4592</p>
                 </div>
 
             </div>

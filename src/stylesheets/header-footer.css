@@ -14,7 +14,8 @@
     margin-left: 25vw;
     position: fixed;
     top: 17px;
-    left: 0px;      
+    left: 0px;   
+    z-index: 3;   
 }
 .Header-p p{
     border: #52D857 1px solid; 
@@ -127,15 +128,18 @@ input, textarea{
     color: white;
 }
 .footer-content p{
-    font-size: 25px;
+    font-size: 20px;
 
+}
+.footer-content-p{
+    padding-bottom: 10px;
 }
 .footer-content svg{
     font-size: 2em;
     color: white;
 }
 .footer-content svg:hover{
-    color: cyan;
+    color: #52D857;
     transform: scale(1.05);
     cursor: pointer;
 }
@@ -194,5 +198,12 @@ display: none;
     .contact-form{
         padding: 15px !important;
         margin: 15px !important;
+    }
+    .footer-content{
+        padding-left: 5px;
+        padding-right: 5px;
+    }
+    .footer-content p{
+        font-size: 15px;
     }
 }

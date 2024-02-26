@@ -11,6 +11,7 @@ body {
 }
 body, html{
   overflow-x: hidden;
+  scroll-behavior: smooth;
 }
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',

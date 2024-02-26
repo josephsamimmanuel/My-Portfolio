@@ -8,7 +8,7 @@ import { SiMysql } from "react-icons/si";
 function Courosel() {
   return (
     <div>
-        <div className='courosel-parent position-relative'>
+        <div className='courosel-parent position-relative' id='courosel'>
         <h1 className='position-absolute top-0 start-0 end-0 text-center mt-5'>Technologies I Use</h1>
         <div className='gallery'>
 

@@ -6,11 +6,16 @@ import Courses from './pages/Courses';
 import Contact from './pages/Contact';
 import {BrowserRouter, Route, Routes} from 'react-router-dom'
 import React from 'react';
-import Footer from './components/Footer';
 import './stylesheets/home.css'
 import './stylesheets/header-footer.css'
 import './stylesheets/courosel.css'
 import './stylesheets/projects-courses.css'
+import AOS from 'aos';
+import 'aos/dist/aos.css'; // You can also use <link> for styles
+// ..
+AOS.init({
+  duration:500
+});
 
 function App() {
   return (
@@ -23,7 +28,7 @@ function App() {
       <Route path='/contact' exact Component={Contact}></Route>
       </Routes>
     </BrowserRouter>
-    <Footer></Footer>
+    
     </div>
   );
 }

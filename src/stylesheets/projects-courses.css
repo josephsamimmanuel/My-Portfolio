@@ -4,6 +4,7 @@
 }
 .projects-list{
     overflow: hidden;
+    padding-bottom: 20px;
 }
 .project{
     padding: 20px;
