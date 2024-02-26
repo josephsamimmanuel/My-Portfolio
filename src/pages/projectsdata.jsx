@@ -32,7 +32,7 @@ const projectsdata=[
     {
         title:"BMI CALCULATOR",
         image:"BMI_Calculator.png",
-        description:"An E-Commerce Application developed using HTML, CSS, Bootstrap and Javascript",
+        description:"An App that calculates BMI, developed using HTML, CSS, Bootstrap and Javascript",
         link:"https://josephsamimmanuel.github.io/BMI-calculator/"
     }
 ]

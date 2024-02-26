@@ -100,12 +100,7 @@
 .container-education-style{
     color: #52D857;
 }
-.container-start{
-    margin-left: 5px;
-}
-.container-end{
-    margin-right: 5px;
-}
+
 
 @keyframes project-animation{
     0%{
@@ -162,5 +157,9 @@
     .courses-intro-content p{
         padding: 10px;
         
+    }
+    .container-center{
+        margin-left: 1px;
+        margin-right: 1px;
     }
 }
