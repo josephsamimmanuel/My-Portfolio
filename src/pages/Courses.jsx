@@ -25,7 +25,7 @@ function Courses() {
       </div>
       <div style={{backgroundColor:"#C2C6CA"}}>
 
-      <div className="certification row">
+      <div className="certification row" id='education'>
         <h1 className='certification-h1'>Certifications</h1>
           {
             certificationdata.map(function(project){
@@ -45,7 +45,7 @@ function Courses() {
             })}
         </div>
 
-      <div className="container-center row flex justify-content-center p-3" id='education'>
+      <div className="container-center row flex justify-content-center p-3" >
         <h1 className='text-center p-4 text-decoration-underline pb-5'>Educational Journey</h1>
         <div className="container-education col-md-6">
           <h5 className='container-education-h5'>Full Stack Web Developer-Freelance</h5>
