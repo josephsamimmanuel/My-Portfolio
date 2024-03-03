@@ -1,10 +1,12 @@
 import React from 'react'
 import Header from '../components/Header'
 import Footer from '../components/Footer'
+import certificationdata from './Certification'
+import { GrFormView } from "react-icons/gr";
 
 const skills=["HTML", "HTML5", "CSS3", "Bootstrap", "TailwindCSS", "CSSFlexbox", "React.js", "Node.js", "Express.js", "version control", "GitHub", "DOM", "MongoDB", "MySQL", "API", "frontend developer", "backend developer" , "Error Handling and Debugging", "Canva", "Microsoft Excel"]
 const oldskills=["Simulink","Matlab","Mathworks","Solar PV"]
-const others=["Github","Vercel","Netlify"]
+const others=["VS Code","Github","Vercel","Netlify","Googling","Basics of ChatGPT3.5"]
 function Courses() {
   return (
     <div>
@@ -22,7 +24,29 @@ function Courses() {
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="#001220" fill-opacity="1" d="M0,192L26.7,181.3C53.3,171,107,149,160,144C213.3,139,267,149,320,170.7C373.3,192,427,224,480,234.7C533.3,245,587,235,640,224C693.3,213,747,203,800,181.3C853.3,160,907,128,960,128C1013.3,128,1067,160,1120,149.3C1173.3,139,1227,85,1280,80C1333.3,75,1387,117,1413,138.7L1440,160L1440,0L1413.3,0C1386.7,0,1333,0,1280,0C1226.7,0,1173,0,1120,0C1066.7,0,1013,0,960,0C906.7,0,853,0,800,0C746.7,0,693,0,640,0C586.7,0,533,0,480,0C426.7,0,373,0,320,0C266.7,0,213,0,160,0C106.7,0,53,0,27,0L0,0Z"></path></svg>
       </div>
       <div style={{backgroundColor:"#C2C6CA"}}>
+
+      <div className="certification row">
+        <h1 className='certification-h1'>Certifications</h1>
+          {
+            certificationdata.map(function(project){
+              return (<div className="col-md-4 p-5">
+              <div className="position-relative project">
+                <img src={project.image} alt="" />
+                <div className="project-content">
+                  <h3>{project.title}</h3>
+                  <hr />
+                  <p>{project.description}</p>
+                  <p>{project.grade}</p>
+                  {/* <button className="primary-button projects-btn"><a href={project.link} className='white'>Get Started</a></button> */}
+                  <button className='primary-button'><a style={{color:"black", textDecoration:"none"}} href={project.link}> <GrFormView></GrFormView> </a></button>
+                </div>
+                </div>
+                </div>)
+            })}
+        </div>
+
       <div className="container-center row flex justify-content-center p-3" id='education'>
+        <h1 className='text-center p-4 text-decoration-underline pb-5'>Educational Journey</h1>
         <div className="container-education col-md-6">
           <h5 className='container-education-h5'>Full Stack Web Developer-Freelance</h5>
           <p className='container-education-p'>Sep 2023 - Present</p>
@@ -106,7 +130,7 @@ function Courses() {
         </div>
       </div>
 
-      <div className="container-center row flex justify-content-center mt-5 p-3">
+      <div className="container-center row flex justify-content-center mt-5 p-3 pb-5">
         <div className="container-education col-md-6">
           <h5 className='container-education-h5'>Rose Mary Matriculation Higher Secondary School, Palayamkottai</h5>
           <p className='container-education-p'>Apr 2007 - Apr 2008</p>

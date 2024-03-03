@@ -100,6 +100,13 @@
 .container-education-style{
     color: #52D857;
 }
+.certification-h1{
+    text-align: center;
+    text-decoration: underline;
+}
+.project-content svg{
+    font-size: 2em;
+}
 
 
 @keyframes project-animation{

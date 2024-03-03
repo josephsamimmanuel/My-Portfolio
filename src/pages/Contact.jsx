@@ -6,7 +6,7 @@ function Contact() {
   return (
     <div>
       <Header></Header>
-      <div className="container contact mt-5">
+      <div className="container contact mt-5 pb-5">
         <div className="row pt-5">
           <div className="col-md-6 p-5">
             <img src="./contactus.svg" alt="" />

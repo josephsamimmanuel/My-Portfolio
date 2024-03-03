@@ -122,6 +122,7 @@ input, textarea{
     margin-top: 20px;
     border-radius: 25px;
 }
+
 .footer-content{
     background-color: #001220;
     text-align: center;
@@ -133,6 +134,7 @@ input, textarea{
 }
 .footer-content-p{
     padding-bottom: 10px;
+    padding-top: 25px;
 }
 .footer-content svg{
     font-size: 2em;

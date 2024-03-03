@@ -27,7 +27,7 @@ function Projects() {
           </div>
         </div>
 
-        <div className="container projects-list" id='projects'>
+        <div className="container projects-list pb-5" id='projects'>
           <h3 className='font-bold'>Take a Look of my Project</h3>
           <hr />
 
