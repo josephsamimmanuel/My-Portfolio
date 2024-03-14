@@ -2,8 +2,8 @@ const certificationdata=[
     {
         title:"MERN Stack Development",
         image:"./MERN Stack.png",
-        description:"Learnt web development: Javascript, ReactJs, NodeJs",
-        grade:"Full Stack Web Development",
+        description:"Learnt web development: HTML, CSS, Javascript, ReactJs, NodeJs, ",
+        grade:"Proficient in Frontend and Backend with industry level Projects",
         link:"https://www.errormakesclever.com/share-certificate?serialno=QAGU74F3"
     },
     {

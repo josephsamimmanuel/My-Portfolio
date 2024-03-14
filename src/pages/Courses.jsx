@@ -2,6 +2,7 @@ import React from 'react'
 import Header from '../components/Header'
 import Footer from '../components/Footer'
 import certificationdata from './Certification'
+import workshopdata from './Workshops'
 import { GrFormView } from "react-icons/gr";
 
 const skills=["HTML", "HTML5", "CSS3", "Bootstrap", "TailwindCSS", "CSSFlexbox", "React.js", "Node.js", "Express.js", "version control", "GitHub", "DOM", "MongoDB", "MySQL", "API", "frontend developer", "backend developer" , "Error Handling and Debugging", "Canva", "Microsoft Excel"]
@@ -38,7 +39,27 @@ function Courses() {
                   <p>{project.description}</p>
                   <p>{project.grade}</p>
                   {/* <button className="primary-button projects-btn"><a href={project.link} className='white'>Get Started</a></button> */}
-                  <button className='primary-button'><a style={{color:"black", textDecoration:"none"}} href={project.link}> <GrFormView></GrFormView> </a></button>
+                  <button className='primary-button'><a style={{color:"black", textDecoration:"none"}} href={project.link}> View<GrFormView></GrFormView> </a></button>
+                </div>
+                </div>
+                </div>)
+            })}
+        </div>
+
+        <div className="certification row" id='education'>
+        <h1 className='certification-h1'>Workshops</h1>
+          {
+            workshopdata.map(function(project){
+              return (<div className="col-md-4 p-5">
+              <div className="position-relative project">
+                <img src={project.image} alt="" />
+                <div className="project-content">
+                  <h3>{project.title}</h3>
+                  <hr />
+                  <p>{project.description}</p>
+                  <p>{project.grade}</p>
+                  {/* <button className="primary-button projects-btn"><a href={project.link} className='white'>Get Started</a></button> */}
+                  <button className='primary-button'><a style={{color:"black", textDecoration:"none"}} href={project.link}> View<GrFormView></GrFormView> </a></button>
                 </div>
                 </div>
                 </div>)
