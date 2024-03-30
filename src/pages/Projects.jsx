@@ -3,6 +3,9 @@ import Header from '../components/Header'
 import { FaLaptopCode } from "react-icons/fa";
 import projectsdata from './projectsdata';
 import Footer from '../components/Footer';
+import reactdata from './Reactdata';
+import nodedata from './nodedata';
+import frontenddata from './Frontenddata';
 
 function Projects() {
   return (
@@ -28,7 +31,9 @@ function Projects() {
         </div>
 
         <div className="container projects-list pb-5" id='projects'>
-          <h3 className='font-bold'>Take a Look of my Project</h3>
+          <h2 className='font-bold'>Take a Look of my Project</h2>
+          <hr />
+          <h4 className='font-bold'>Projects on MERN stack</h4>
           <hr />
 
         <div className="row">
@@ -50,6 +55,82 @@ function Projects() {
         </div>
 
         </div>
+
+        <div className="container projects-list pb-5" id='projects'>
+
+          <h4 className='font-bold'>Projects on NodeJs</h4>
+          <hr />
+
+        <div className="row">
+          {
+           nodedata.map(function(project){
+              return (<div className="col-md-4">
+              <div className="position-relative project">
+                <img src={project.image} alt="" />
+                <div className="project-content">
+                  <h4>{project.title}</h4>
+                  <hr />
+                  <p>{project.description}</p>
+                  {/* <button className="primary-button projects-btn"><a href={project.link} className='white'>Get Started</a></button> */}
+                  <button className='primary-button'><a style={{color:"black", textDecoration:"none"}} href={project.link}>View Me</a></button>
+                </div>
+                </div>
+                </div>)
+            })}
+        </div>
+
+        </div>
+
+        <div className="container projects-list pb-5" id='projects'>
+
+          <h4 className='font-bold'>Projects on ReactJs</h4>
+          <hr />
+
+        <div className="row">
+          {
+            reactdata.map(function(project){
+              return (<div className="col-md-4">
+              <div className="position-relative project">
+                <img src={project.image} alt="" />
+                <div className="project-content">
+                  <h1>{project.title}</h1>
+                  <hr />
+                  <p>{project.description}</p>
+                  {/* <button className="primary-button projects-btn"><a href={project.link} className='white'>Get Started</a></button> */}
+                  <button className='primary-button'><a style={{color:"black", textDecoration:"none"}} href={project.link}>View Me</a></button>
+                </div>
+                </div>
+                </div>)
+            })}
+        </div>
+
+        </div>
+
+        <div className="container projects-list pb-5" id='projects'>
+
+<h4 className='font-bold'>Projects on FrontEnd</h4>
+<hr />
+
+<div className="row">
+{
+  frontenddata.map(function(project){
+    return (<div className="col-md-4">
+    <div className="position-relative project">
+      <img src={project.image} alt="" />
+      <div className="project-content">
+        <h1>{project.title}</h1>
+        <hr />
+        <p>{project.description}</p>
+        {/* <button className="primary-button projects-btn"><a href={project.link} className='white'>Get Started</a></button> */}
+        <button className='primary-button'><a style={{color:"black", textDecoration:"none"}} href={project.link}>View Me</a></button>
+      </div>
+      </div>
+      </div>)
+  })}
+</div>
+
+</div>
+
         <Footer></Footer>
     </div>
   )
