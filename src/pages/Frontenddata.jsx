@@ -48,6 +48,12 @@ const frontenddata=[
         link:"https://josephsamimmanuel.github.io/User-Response-Feedback/"
     },
     {
+        title:"AMAZON_CLONE",
+        image:"./amazon.png",
+        description:"An E-Commerce Application developed using HTML, CSS and Javascript",
+        link:"https://josephsamimmanuel.github.io/amazon_clone/"
+    },
+    {
         title:"GREENDEN",
         image:"./greenden.png",
         description:"An E-Commerce Application developed using HTML, Tailwind CSS and Javascript",
