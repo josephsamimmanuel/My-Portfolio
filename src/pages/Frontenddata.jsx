@@ -3,7 +3,7 @@ const frontenddata=[
         title:"NOSTRA",
         image:"./Nostra.png",
         description:"An E-Commerce Application developed using HTML, CSS, Bootstrap and Javascript",
-        link:"https://nostra-navy.vercel.app/"
+        link:"https://nostra-ecommerce-site.vercel.app/"
     },
     {
         title:"BMI CALCULATOR",
