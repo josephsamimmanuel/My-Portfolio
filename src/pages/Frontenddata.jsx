@@ -3,73 +3,67 @@ const frontenddata=[
         title:"NOSTRA",
         image:"./Nostra.png",
         description:"An E-Commerce Application developed using HTML, CSS, Bootstrap and Javascript",
-        link:"https://josephsamimmanuel.github.io/Nostra-Ecommerce-site/"
+        link:"https://nostra-navy.vercel.app/"
     },
     {
         title:"BMI CALCULATOR",
         image:"./BMI_Calculator.png",
         description:"An App that calculates BMI, developed using HTML, CSS, Bootstrap and Javascript",
-        link:"https://josephsamimmanuel.github.io/BMI-calculator/"
+        link:"https://bmi-calculator-ashen-omega.vercel.app/"
     },
     {
         title:"AGE CALCULATOR",
         image:"./agecalculator.png",
         description:"An App that calculates age, developed using HTML, CSS, Bootstrap and Javascript",
-        link:"https://josephsamimmanuel.github.io/Age-Calculator/"
+        link:"https://age-calculator-henna-tau.vercel.app/"
     },
     {
         title:"PASSWORD CHECK",
         image:"./passwordstrength.png",
         description:"An App that checks the strength of password, developed using HTML, CSS, Bootstrap and Javascript",
-        link:"https://josephsamimmanuel.github.io/Password-Strength-Checker/"
+        link:"https://password-strength-checker-chi.vercel.app/"
     },
     {
         title:"BRAIN BATTLE",
         image:"./brainbattle.png",
         description:"A Quiz App, developed using HTML, CSS and Javascript",
-        link:"https://josephsamimmanuel.github.io/Brain-Battle/"
+        link:"https://brain-battle.vercel.app/"
     },
     {
         title:"GST CALCULATOR",
         image:"./gst.png",
         description:"An App that calculates GST, developed using HTML, CSS and Javascript",
-        link:"https://josephsamimmanuel.github.io/GST-Calculator/"
+        link:"https://gst-calculator-nine.vercel.app/"
     },
     {
         title:"TESTIMONIALS",
         image:"./testimonials.png",
         description:"A testimonial slider, developed using HTML, CSS and Javascript",
-        link:"https://josephsamimmanuel.github.io/Linkedin-Testimonial-Slider/"
+        link:"https://linkedin-testimonial-slider.vercel.app/"
     },
     {
         title:"FEEDBACK",
         image:"./feedback.png",
         description:"An User Response Feedback App, developed using HTML, CSS, Bootstrap and Javascript",
-        link:"https://josephsamimmanuel.github.io/User-Response-Feedback/"
-    },
-    {
-        title:"AMAZON_CLONE",
-        image:"./amazon.png",
-        description:"An E-Commerce Application developed using HTML, CSS and Javascript",
-        link:"https://josephsamimmanuel.github.io/amazon_clone/"
+        link:"https://user-response-feedback.vercel.app/"
     },
     {
         title:"GREENDEN",
         image:"./greenden.png",
         description:"An E-Commerce Application developed using HTML, Tailwind CSS and Javascript",
-        link:"https://josephsamimmanuel.github.io/Greenden-Tailwind/"
+        link:"https://greenden-tailwind-ruddy.vercel.app/"
     },
     {
         title:"UDEMY_CLONE",
         image:"./Udemy_clone.png",
         description:"An E-Commerce Application developed using HTML, CSS",
-        link:"https://josephsamimmanuel.github.io/Udemy-Clone/"
+        link:"https://udemy-clone-rho.vercel.app/"
     },
     {
         title:"TRIPADVISOR_CLONE",
         image:"./tripadvisor.png",
         description:"An E-Commerce Application developed using HTML, CSS",
-        link:"https://josephsamimmanuel.github.io/Tripadvisor-clone/"
+        link:"https://tripadvisor-clone-sand.vercel.app/"
     },
 ]
 export default frontenddata
