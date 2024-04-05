@@ -4,7 +4,7 @@ const certificationdata=[
         image:"./MERN Stack.png",
         description:"Learnt web development: HTML, CSS, Javascript, ReactJs, NodeJs, ",
         grade:"Proficient in Frontend and Backend with industry level Projects",
-        link:"https://www.errormakesclever.com/share-certificate?serialno=QAGU74F3"
+        link:"https://drive.google.com/file/d/1fyfnlybUfHus0UsMrZIXEgu1dZjawQAz/view?usp=drive_link"
     },
     {
         title:"Web Development with HTML, CSS, JavaScript",
