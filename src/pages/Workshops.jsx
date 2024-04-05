@@ -11,7 +11,7 @@ const workshopdata=[
         image:"./ReactJs.png",
         description:"Mastering ReactJs",
         grade:"Learnt: All the essentails to build React applications",
-        link:"https://www.errormakesclever.com/share-certificate?serialno=D7ZP11UX"
+        link:"https://drive.google.com/file/d/1ysI3s_9Sg_b5eJ_Ss8HjxKaMZrYz4fx1/view?usp=drive_link"
     },
     {
         title:"HTML | CSS Masterclass",
