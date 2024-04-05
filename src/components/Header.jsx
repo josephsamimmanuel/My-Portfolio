@@ -15,7 +15,7 @@ function Header() {
         <p className={`${path === '/courses' && 'active'}`}> <Link to={'/courses'}>Education</Link> </p>
         <p className={`${path === '/contact' && 'active'}`}><Link to={'/contact'}>Contact</Link></p>
         <p className={`${path === 'https://github.com/josephsamimmanuel' && 'active'}`}> <a href="https://github.com/josephsamimmanuel">GitHub</a></p>
-        <p className={`${path === 'https://drive.google.com/file/d/1mnhGIsY6TF6RTlwjbugVA52NFPm_Iiha/view' && 'active'}`}> <a href="https://drive.google.com/file/d/1mnhGIsY6TF6RTlwjbugVA52NFPm_Iiha/view">Resume</a> </p>
+        <p className={`${path === 'https://drive.google.com/file/d/12yZuVG3dhBlUSOrgcfNKVDwvBsJbtqsu/view?usp=sharing' && 'active'}`}> <a href="https://drive.google.com/file/d/12yZuVG3dhBlUSOrgcfNKVDwvBsJbtqsu/view?usp=sharing">Resume</a> </p>
       </div>
       {showheader ? (<RiCloseCircleFill
         onClick={() => { setshowheader(!showheader) }} className='menu-icon position-fixed top=0 end-0'></RiCloseCircleFill>) :
@@ -28,7 +28,7 @@ function Header() {
         <li><p className={`${path === '/courses' && 'active'}`}> <Link to={'/courses'}>Education</Link> </p></li>
         <li><p className={`${path === '/contact' && 'active'}`}><Link to={'/contact'}>Contact</Link></p></li>
         <li><p className={`${path === 'https://github.com/josephsamimmanuel' && 'active'}`}> <a href="https://github.com/josephsamimmanuel">GitHub</a></p></li>
-        <li> <p className={`${path === 'https://drive.google.com/file/d/1mnhGIsY6TF6RTlwjbugVA52NFPm_Iiha/view' && 'active'}`}> <a href="https://drive.google.com/file/d/1mnhGIsY6TF6RTlwjbugVA52NFPm_Iiha/view">Resume</a> </p></li>
+        <li> <p className={`${path === 'https://drive.google.com/file/d/12yZuVG3dhBlUSOrgcfNKVDwvBsJbtqsu/view?usp=drive_link' && 'active'}`}> <a href="https://drive.google.com/file/d/12yZuVG3dhBlUSOrgcfNKVDwvBsJbtqsu/view?usp=drive_link">Resume</a> </p></li>
       </ul>
     </div>
   )
