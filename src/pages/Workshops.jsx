@@ -1,5 +1,12 @@
 const workshopdata=[
     {
+        title:"Master Flutter Webinar",
+        image:"./flutter.png",
+        description:"Mastering Flutter: Learnt about Widgets, State, Navigation and much more",
+        grade:"Created Todo App, Mini Calci, FingerTap Game ",
+        link:"https://agneljohnd.graphy.com/share-certificate?serialno=IVEMNCUM"
+    },
+    {
         title:"Javascript Masterclass",
         image:"./Javascript masterclass.png",
         description:"Mastering Javascript: From Basics to Dynamic Web Development",

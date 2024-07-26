@@ -25,6 +25,18 @@ const certificationdata=[
         image:"./MySQL.jpg",
         description:"Learnt Database Design and Data Analysis with Normalization and Relationships",
         link:"https://www.udemy.com/certificate/UC-f22194ff-22f9-4796-8f41-703abe3c7af9/"
-    }
+    },
+    {
+        title:"Advanced Javascript",
+        image:"./javacript.png",
+        description:"Learnt core concepts: Asynchronous javascript, Callback Hell, Promises, Async/Await",
+        link:"https://www.namastedev.com/josesamimmanuel/certificates/namaste-javascript"
+    },
+    {
+        title:"Advanced React.Js",
+        image:"./react.png",
+        description:"Learnt: Props/State, Functional Mapping, React Hooks, API usage, React Router, Component Lifecycle, React-Redux",
+        link:"https://www.namastedev.com/josesamimmanuel/certificates/namaste-react"
+    },
 ]
 export default certificationdata
