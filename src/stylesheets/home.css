@@ -28,8 +28,13 @@
     margin-left: 150px;
 } */
 .introduction-container-about{
-    margin-left: 10%;
-    margin-right: 10%;
+    padding-top: 10px;
+    width: 55%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
 }
 .introduction-container-about p{
     text-align: center;
@@ -48,7 +53,9 @@
 .intro-content{
     padding-top: 15px;
     display: flex;
+    flex-direction: column;
     justify-content: center;
+    align-items: center;
 }
 .devstack{
     color: black;
@@ -65,9 +72,71 @@
     border-radius: 50px;
     transform: scale(1.05);
 }
+.skillSet {
+    color: black;
+    background-color: #EBECF0;
+    border-radius: 50px;
+    transition: all 0.5s;
+    box-shadow: 5px 5px 0px #d6d7da,
+        -5px -5px 0px #ffffff;
+    padding: 30px;
+}
+
+.skillSet:hover {
+    border-radius: 50px;
+    transform: scale(1.05);
+}
+
+.skillSet .row {
+    margin-top: 30px;
+}
+
+.skillSet .col-md-3 div {
+    padding: 15px;
+    height: 100%;
+}
+
+.skillSet h3 {
+    font-size: 1.5rem;
+    margin-bottom: 15px;
+    color: #001220;
+}
+
+.skillSet hr {
+    margin: 15px 0;
+    border-color: #52D857;
+}
+
+.skillSet span {
+    display: block;
+    font-weight: bold;
+    margin-top: 15px;
+    font-size: 1rem;
+}
+
+.skillSet .font-size {
+    margin: 5px 0;
+    color: #333;
+}
+
+.skillSet .text-left {
+    text-align: left !important;
+}
+
+.skillSet .text-center {
+    text-align: center !important;
+}
+
+.skillSet .text-end {
+    text-align: right !important;
+}
+
 .text h3{
     color: black;
     font-size: 40px;
+}
+.font-size{
+    font-size: 12px;
 }
 .who-am-i{
     height: 75vh;
@@ -125,9 +194,43 @@ pre{
     text-align: center;
     text-decoration: underline;
 }
+.container-visionary-one{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 50px;
+    gap: 50px;
+}
 
+.introduction-container-profile {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 20px 0;
+    padding-top: 40px;
+}
+
+.introduction-container-profile img {
+    height: 200px;
+    width: 200px;
+    border-radius: 50%;
+    border: 2px solid #52D857;
+    box-shadow: 0 0 15px rgba(82, 216, 87, 0.3);
+    transition: transform 0.3s ease;
+}
+
+.introduction-container-profile img:hover {
+    transform: scale(1.05);
+}
 
 @media (max-width: 760px) {
+    .introduction-container-about p {
+        display: none;
+    }
+    .introduction-container-about{
+        padding-top: 200px;
+    }
+    
     .introduction div h1{
         color: #ffffff;
         font-size: 28px;
@@ -156,6 +259,9 @@ pre{
     .introduction-container-about i{
         font-size: medium;
         
+    }
+    .container-visionary-one{
+        flex-wrap: wrap;
     }
     .who-am-i{
         height: 100vh;
@@ -189,5 +295,130 @@ pre{
         font-weight: bold;
         text-align: center;
     }
+    .introduction-container-profile img{
+        height: 100px;
+        width: 100px;
+        border-radius: 50%;
+        border: 1px solid #52D857;
+    }
+    
 
+}
+
+@media (max-width: 768px) {
+    .skillSet .col-md-3 div {
+        text-align: center !important;
+        margin-bottom: 30px;
+    }
+    
+    .skillSet span {
+        margin-top: 10px;
+    }
+    
+    .skillSet .font-size {
+        margin: 3px 0;
+    }
+}
+
+.Developer-stack-scroll {
+  background: #001220;
+  padding: 60px 0;
+  overflow: hidden;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-radius: 5px;
+}
+
+.Developer-stack-scroll-title {
+  text-align: center;
+  margin-bottom: 50px;
+  width: 100%;
+}
+
+.Developer-stack-scroll-title h3 {
+  color: #52D857;
+  font-size: 2.5rem;
+  font-weight: bold;
+}
+
+.scroll-row {
+  display: flex;
+  margin: 20px 0;
+  width: fit-content;
+  animation-duration: 20s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+  position: relative;
+}
+
+.scroll-row-right {
+  animation-name: scrollRight;
+}
+
+.scroll-row-left {
+  animation-name: scrollLeft;
+}
+
+.scroll-wrapper {
+  width: 80%;
+  margin: 0 auto;
+  overflow: hidden;
+  position: relative;
+}
+
+.skill-item {
+  flex-shrink: 0;
+  padding: 15px 25px;
+  margin: 0 15px;
+  background: rgba(82, 216, 87, 0.1);
+  border: 1px solid #52D857;
+  border-radius: 8px;
+  color: white;
+  font-size: 1.1rem;
+  min-width: 150px;
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.skill-item:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 5px 15px rgba(82, 216, 87, 0.3);
+  background: rgba(82, 216, 87, 0.2);
+}
+
+@keyframes scrollRight {
+  0% {
+    transform: translateX(-50%);
+  }
+  100% {
+    transform: translateX(0%);
+  }
+}
+
+@keyframes scrollLeft {
+  0% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .Developer-stack-scroll-title h3 {
+    font-size: 2rem;
+  }
+  
+  .skill-item {
+    padding: 10px 20px;
+    font-size: 1rem;
+    min-width: 120px;
+  }
+
+  .scroll-wrapper {
+    width: 95%;
+  }
 }
