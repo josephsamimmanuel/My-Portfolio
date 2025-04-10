@@ -38,5 +38,23 @@ const certificationdata=[
         description:"Learnt: Props/State, Functional Mapping, React Hooks, API usage, React Router, Component Lifecycle, React-Redux",
         link:"https://www.namastedev.com/josesamimmanuel/certificates/namaste-react"
     },
+    {
+        title:"Advanced Node.Js",
+        image:"./NodeJs.webp",
+        description:"Learnt: RESTful APIs, Express.js, MongoDB, Mongoose, JWT Authentication, Testing, Deployment, Event Loop",
+        link:"https://namastedev.com/josesamimmanuel/certificates/namaste-node"
+    },
+    {
+        title:"Complete Python",
+        image:"./Python.png",
+        description:"Learnt: Python, Data Structures, Algorithms, Object-Oriented Programming, File Handling, Exception Handling",
+        link:"https://media.geeksforgeeks.org/courses/certificates/808bc59e0ef931aba3f1a1f32409d6b0.pdf"
+    },
+    {
+        title:"Bootstrap",
+        image:"./Bootstrap.png",
+        description:"Learnt: Bootstrap, Grid System, Components, Responsive Design, Customization",
+        link:"https://media.geeksforgeeks.org/courses/certificates/761f974da73382387b952c3681593fc3.pdf"
+    },
 ]
 export default certificationdata
