@@ -213,7 +213,7 @@ function Home() {
             <div className='n-box2 p-5 font-bold'>
               <h6 className='container-visionary-h6'>About Me</h6>
               <i style={{ color: `black` }} className="fa-solid fa-quote-left "></i>
-              <p className='container-visionary-p'>As a fresher in web development, I am passionate about crafting web experiences that stand out, ensuring every detail exudes style and magic. I enjoy taking on complex challenges, and this excitement propels my journey toward becoming a full-stack wizard. The prospect of working with a dynamic team and learning from experienced professionals is incredibly thrilling. I am eager to enhance my skills in this ever-evolving field.</p>
+              <p className='container-visionary-p'>I'm a React.js Frontend Developer with 8+ months of experience, skilled in creating responsive UIs and managing complex states using Redux and Redux-Saga. I've expanded into backend development with Node.js and MongoDB, and have basic deployment knowledge with AWS EC2, Nginx, and PM2. I'm passionate about learning, coding best practices, and team collaboration.</p>
             </div>
           </div>
         </div>
@@ -223,7 +223,7 @@ function Home() {
             <div className='n-box2 p-5 font-bold'>
               <h6 className='container-visionary-h6'>Reason to Hire Me</h6>
               <i style={{ color: `black` }} className="fa-solid fa-quote-left "></i>
-              <p className='container-visionary-p'>I'm a budding Full Stack Developer with a passion for crafting amazing user experiences. I dive into each project with new perspectives, a ton of ambition, and a touch of unconventional thinking. My goal is to work magic in the digital realm through energetic and innovative efforts. Let's connect and collaborate to breathe life into unique, ambitious, and engaging experiences!</p>
+              <p className='container-visionary-p'>I bring a solid blend of frontend expertise and backend understanding, making me a capable contributor to full-stack projects. I’m quick to learn, proactive in solving problems, and excited to collaborate with dynamic teams. My passion for clean code, performance optimization, and continuous learning makes me a valuable asset to any development team.</p>
             </div>
           </div>
         </div>
