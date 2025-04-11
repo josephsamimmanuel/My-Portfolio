@@ -193,6 +193,10 @@ function Home() {
             <div className=' text-end'>
               <h3 className='font-bold'>3rd Party Services</h3>
               <hr />
+              <span>GoDaddy</span>
+              <p className='font-size'>For Domain Registration</p>
+              <span>Cloudflare</span>
+              <p className='font-size'>For DNS and SSL Certificates</p>
               <span>Stripe</span>
               <p className='font-size'>For Payment Gateway</p>
               <span>Twilio</span>
