@@ -9,7 +9,7 @@ import axios from 'axios';
 import { BASE_URL } from '../utils/constants';
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
-import { InfinitySpin } from 'react-loader-spinner';
+import './Courses.css';  
 
 const skills=["HTML", "HTML5", "CSS3", "Bootstrap", "TailwindCSS", "CSSFlexbox", "React.js", "Node.js", "Express.js", "version control", "GitHub", "DOM", "MongoDB", "MySQL", "API", "frontend developer", "backend developer" , "Error Handling and Debugging", "Canva", "Microsoft Excel"]
 const oldskills=["Simulink","Matlab","Mathworks","Solar PV"]
@@ -25,7 +25,9 @@ function Courses() {
       setIsLoading(true);
       const response = await axios.get(`${BASE_URL}/get-certifications`);
       if (response.data.data) {
-        setCertificationdata(response.data.data);
+        console.log(response.data.data);
+        setCertificationdata(response.data.data.certifications);
+        setWorkshopdata(response.data.data.workshops);
         toast.success(response.data.message);
       } else {
         console.error("No certifications found");
@@ -39,28 +41,8 @@ function Courses() {
     }
   };
 
-  const fetchWorkshops = async () => {
-    try {
-      setIsLoading(true);
-      const response = await axios.get(`${BASE_URL}/get-workshops`);
-      if (response.data.data) {
-        setWorkshopdata(response.data.data);
-        toast.success(response.data.message);
-      } else {
-        console.error("No workshops found");
-        toast.warning(response.data.message);
-      }
-    } catch (error) {
-      console.error("Error fetching workshops:", error);
-      toast.error('Failed to load workshops');
-    } finally {
-      setIsLoading(false);
-    }
-  };
-
   useEffect(() => {
     fetchCertifications();
-    fetchWorkshops();
   }, []);
   
 
@@ -86,7 +68,7 @@ function Courses() {
         <h1 className='certification-h1'>Certifications</h1>
         {isLoading ? (
           <div className="d-flex justify-content-center align-items-center" style={{ minHeight: '200px' }}>
-            <InfinitySpin color="#001220" height={80} width={80} />
+            <div className="loader"></div>
           </div>
         ) : (
           certificationdata.map(function(project){
@@ -114,7 +96,7 @@ function Courses() {
         <h1 className='certification-h1'>Workshops</h1>
         {isLoading ? (
           <div className="d-flex justify-content-center align-items-center" style={{ minHeight: '200px' }}>
-            <InfinitySpin color="#001220" height={80} width={80} />
+            <div className="loader"></div>
           </div>
         ) : (
           workshopdata.map(function(project){
