@@ -41,10 +41,10 @@
 }
 .primary-button{
     background-color: #52D857;
-    height: 50px;
+    height: 40px;
     border-radius: 20px;
     border: none;
-    width: 20%;
+    padding: 10px 20px;
 }
 .primary-button:hover{
     background-color: white;

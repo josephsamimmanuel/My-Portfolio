@@ -1,16 +1,72 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import Header from '../components/Header'
 import Footer from '../components/Footer'
-import certificationdata from './Certification'
-import workshopdata from './Workshops'
+// import certificationdata from './Certification'
+// import workshopdata from './Workshops'
 import { GrFormView } from "react-icons/gr";
+import { useState } from 'react';
+import axios from 'axios';
+import { BASE_URL } from '../utils/constants';
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
+import { InfinitySpin } from 'react-loader-spinner';
 
 const skills=["HTML", "HTML5", "CSS3", "Bootstrap", "TailwindCSS", "CSSFlexbox", "React.js", "Node.js", "Express.js", "version control", "GitHub", "DOM", "MongoDB", "MySQL", "API", "frontend developer", "backend developer" , "Error Handling and Debugging", "Canva", "Microsoft Excel"]
 const oldskills=["Simulink","Matlab","Mathworks","Solar PV"]
 const others=["VS Code","Github","Vercel","Netlify","Googling","Basics of ChatGPT3.5"]
+
 function Courses() {
+  const [certificationdata, setCertificationdata] = useState([]);
+  const [workshopdata, setWorkshopdata] = useState([]);
+  const [isLoading, setIsLoading] = useState(true);
+
+  const fetchCertifications = async () => {
+    try {
+      setIsLoading(true);
+      const response = await axios.get(`${BASE_URL}/get-certifications`);
+      if (response.data.data) {
+        setCertificationdata(response.data.data);
+        toast.success(response.data.message);
+      } else {
+        console.error("No certifications found");
+        toast.warning(response.data.message);
+      }
+    } catch (error) {
+      console.error("Error fetching certifications:", error);
+      toast.error('Failed to load certifications');
+    } finally {
+      setIsLoading(false);
+    }
+  };
+
+  const fetchWorkshops = async () => {
+    try {
+      setIsLoading(true);
+      const response = await axios.get(`${BASE_URL}/get-workshops`);
+      if (response.data.data) {
+        setWorkshopdata(response.data.data);
+        toast.success(response.data.message);
+      } else {
+        console.error("No workshops found");
+        toast.warning(response.data.message);
+      }
+    } catch (error) {
+      console.error("Error fetching workshops:", error);
+      toast.error('Failed to load workshops');
+    } finally {
+      setIsLoading(false);
+    }
+  };
+
+  useEffect(() => {
+    fetchCertifications();
+    fetchWorkshops();
+  }, []);
+  
+
   return (
     <div>
+      <ToastContainer position="bottom-center" autoClose={3000} />
       <Header></Header>
       <div className="courses-intro" style={{ backgroundImage: `url('./blob-scene-haikei1.svg')` }}>
         <div className='courses-intro-content'>
@@ -28,43 +84,59 @@ function Courses() {
 
       <div className="certification row" id='education'>
         <h1 className='certification-h1'>Certifications</h1>
-          {
-            certificationdata.map(function(project){
-              return (<div className="col-md-4 p-5">
-              <div className="position-relative project">
+        {isLoading ? (
+          <div className="d-flex justify-content-center align-items-center" style={{ minHeight: '200px' }}>
+            <InfinitySpin color="#001220" height={80} width={80} />
+          </div>
+        ) : (
+          certificationdata.map(function(project){
+            return (<div className="col-md-4 p-5" key={project._id}>
+              <div className="project">
                 <img src={project.image} alt="" />
                 <div className="project-content">
                   <h3>{project.title}</h3>
                   <hr />
-                  <p>{project.description}</p>
+                  <p className="project-description">{project.description}</p>
                   <p>{project.grade}</p>
-                  {/* <button className="primary-button projects-btn"><a href={project.link} className='white'>Get Started</a></button> */}
-                  <button className='primary-button'><a style={{color:"black", textDecoration:"none"}} href={project.link}> View<GrFormView></GrFormView> </a></button>
+                  <button className='primary-button'>
+                    <a style={{color:"black", textDecoration:"none"}} href={project.link}> 
+                      View<GrFormView></GrFormView> 
+                    </a>
+                  </button>
                 </div>
-                </div>
-                </div>)
-            })}
-        </div>
+              </div>
+            </div>)
+          })
+        )}
+      </div>
 
-        <div className="certification row" id='education'>
+      <div className="certification row" id='education'>
         <h1 className='certification-h1'>Workshops</h1>
-          {
-            workshopdata.map(function(project){
-              return (<div className="col-md-4 p-5">
-              <div className="position-relative project">
+        {isLoading ? (
+          <div className="d-flex justify-content-center align-items-center" style={{ minHeight: '200px' }}>
+            <InfinitySpin color="#001220" height={80} width={80} />
+          </div>
+        ) : (
+          workshopdata.map(function(project){
+            return (<div className="col-md-4 p-5" key={project._id}>
+              <div className="project">
                 <img src={project.image} alt="" />
                 <div className="project-content">
                   <h3>{project.title}</h3>
                   <hr />
-                  <p>{project.description}</p>
+                  <p className="project-description">{project.description}</p>
                   <p>{project.grade}</p>
-                  {/* <button className="primary-button projects-btn"><a href={project.link} className='white'>Get Started</a></button> */}
-                  <button className='primary-button'><a style={{color:"black", textDecoration:"none"}} href={project.link}> View<GrFormView></GrFormView> </a></button>
+                  <button className='primary-button'>
+                    <a style={{color:"black", textDecoration:"none"}} href={project.link}> 
+                      View<GrFormView></GrFormView> 
+                    </a>
+                  </button>
                 </div>
-                </div>
-                </div>)
-            })}
-        </div>
+              </div>
+            </div>)
+          })
+        )}
+      </div>
 
       <div className="container-center row flex justify-content-center p-3" >
         <h1 className='text-center p-4 text-decoration-underline pb-5'>Educational Journey</h1>

@@ -197,6 +197,8 @@ function Home() {
               <p className='font-size'>For Domain Registration</p>
               <span>Cloudflare</span>
               <p className='font-size'>For DNS and SSL Certificates</p>
+              <span>Razorpay</span>
+              <p className='font-size'>For Payment Gateway</p>
               <span>Stripe</span>
               <p className='font-size'>For Payment Gateway</p>
               <span>Twilio</span>
@@ -209,7 +211,7 @@ function Home() {
       <div className="container-visionary">
         <div className='container-visionary-title'>
           <h4>Vision</h4>
-          <p>Launching my career: Gaining a Fresh Perspective on Full Stack Development</p>
+          <p>Full Stack Developer with a passion for building scalable and efficient web applications.</p>
         </div>
         <div className= "container-visionary-one">
         <div>

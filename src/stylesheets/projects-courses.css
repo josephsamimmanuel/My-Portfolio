@@ -37,6 +37,7 @@
     background-color: black;
     opacity: 0.8;
     height: 100%;
+    width: 100%;
     color: white;
     font-weight: 500;
     border-radius: 10px;
@@ -107,7 +108,12 @@
 .project-content svg{
     font-size: 2em;
 }
-
+.upload-controls{
+    display: flex;
+    justify-content: spa;
+    align-items: center;
+    gap: 10px;
+}
 
 @keyframes project-animation{
     0%{
@@ -168,5 +174,8 @@
     .container-center{
         margin-left: 1px;
         margin-right: 1px;
+    }
+    .project-description{
+        display: none;
     }
 }
