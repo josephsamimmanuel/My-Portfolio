@@ -1,0 +1,94 @@
+{
+  "education": [
+    {
+      "title": "Frontend Developer",
+      "role": "Frontend Developer - React.js",
+      "timeline": "Aug 2024 - Present",
+      "description": "Passionate Frontend Developer with over 8 months of hands-on industry experience, specializing in building responsive, user-friendly web applications using React.js. Proficient in developing clean and maintainable code, with a strong understanding of component-based architecture, state management, and modern UI libraries. In addition to frontend expertise, I have a keen interest in backend development with practical experience in Node.js and MongoDB, having worked on full-stack projects that enhanced my understanding of API integration, database design, and server-side logic. I am eager to leverage my technical skills and collaborative mindset to contribute meaningfully to dynamic development teams, aiming to deliver impactful solutions that drive growth for both the organization and my professional journey.",
+      "achievements": "Tesignature – Digital Document Signing Platform\nTech Stack: React.js, Node.js, MongoDB, Stripe, Twilio\n\nDeveloped a secure and user-friendly web application for digitally signing documents, supporting multiple user signatures and approval workflows. Implemented role-based access for users to approve or deny documents as required.\n\nIntegrated Stripe payment gateway to enable customers to upgrade to premium plans with ease.\n\nImplemented two-step authentication using Twilio, where a mobile number is verified before allowing document creation for enhanced security.\n\nDesigned and developed responsive UI components using React.js, ensuring a smooth user experience across devices.\n\nContributed to backend development using Node.js and MongoDB, handling user data, document storage, and authentication processes.\n\nEnabled additional pro features for premium users, enhancing the overall value and functionality of the platform.",
+      "skills": {
+        "technical": ["React.js", "HTML/CSS", "JavaScript", "Node.js", "Express.js", "MongoDB", "MySQL", "React-Router", "React-Thunk", "React-Redux-Toolkit", "React-Redux-Saga", "Material-UI", "TailwindCSS", "Bootstrap"],
+        "others": ["VS Code", "Cursor", "GitHub", "Postman", "Swagger","MongoDB Compass","AWS EC2","Linux","Nginx","PM2"]
+      }
+    },
+    {
+      "title": "Full Stack Web Developer-Freelance",
+      "role": "Full Stack Web Developer",
+      "timeline": "Sep 2023 - Present",
+      "description": "With a diverse background encompassing Electrical Engineering (BE EEE, ME), two years as an Assistant Professor, and over three years as an Entrepreneur in Solar-Based Business, I bring a unique blend of skills and experiences to the dynamic IT industry. Transitioning from Non-IT to IT, I am a fresher in Full Stack Development with a robust foundation in the MERN stack, particularly passionate about React and Node.js.",
+      "achievements": "Completed noteworthy projects including the Bulk Mail App, Actodo, Weather App API, and Nostra",
+      "skills": {
+        "technical": ["HTML", "HTML5", "CSS3", "Bootstrap", "TailwindCSS", "CSSFlexbox", "React.js", "Node.js", "Express.js", "version control", "GitHub", "DOM", "MongoDB", "MySQL", "API", "frontend developer", "backend developer", "Error Handling and Debugging", "Canva", "Microsoft Excel"],
+        "others": ["VS Code", "Github", "Vercel", "Netlify", "Googling", "Basics of ChatGPT3.5"]
+      }
+    },
+    {
+      "title": "Jerusalem College of Engineering – India",
+      "role": "Master of Engineering - MEng, Power Electronics and Drives",
+      "timeline": "Aug 2014 - Apr 2016",
+      "grade": "8.4",
+      "description": "Master of Engineering in Power Electronics and Drives | Award-Winning Topper | Solar Enthusiast",
+      "achievements": [
+        "Clinched 2nd prize for academic excellence",
+        "Participated in three conferences",
+        "Published three international journals"
+      ],
+      "projectHighlights": [
+        "Solar Maximum Power Point Tracking for efficient PV panel energy extraction",
+        "Harmonics Minimization"
+      ],
+      "keyHighlights": [
+        "Awarded 2nd prize for academic excellence",
+        "Published in three international journals, showcasing research prowess",
+        "Expertise in Solar Maximum Power Point Tracking and Harmonics Minimization",
+        "Passionate about sustainable energy solutions"
+      ],
+      "skills": ["Simulink", "Matlab", "Mathworks", "Solar PV"]
+    },
+    {
+      "title": "Francis Xavier Engineering College",
+      "role": "Bachelor of Engineering - BE, Electrical and Electronics Engineering",
+      "timeline": "Aug 2010 - Apr 2014",
+      "grade": "7.69",
+      "description": "Results-Driven Engineer | BE Graduate (2014) | 7.69 CGPA",
+      "achievements": ["Consistent academic excellence, highlighted by a strong CGPA"],
+      "projectHighlights": [
+        {
+          "name": "Multiple Angular Force Generator",
+          "type": "Mini Project - 3rd Year",
+          "description": "Developed an innovative Multiple Angular Force Generator, showcasing problem-solving skills and a knack for engineering challenges"
+        },
+        {
+          "name": "Transmission of Data through Fiber Optic Cable",
+          "type": "Final Year Project",
+          "description": "Led a team in the successful completion focused on the Transmission of Data through Fiber Optic Cable"
+        }
+      ],
+      "researchAndPaper": "Three-time winner of paper presentation competitions, demonstrating effective communication and research prowess"
+    },
+    {
+      "title": "Rose Mary Matriculation Higher Secondary School, Palayamkottai",
+      "role": "Higher Secondary",
+      "timeline": "Apr 2009 - Apr 2010",
+      "grade": "1082/1200",
+      "description": "Results-Driven Professional | Higher Secondary (2010) | Aspiring Technologist",
+      "keyHighlights": [
+        "Higher Secondary Graduate (2010) with 1082/1200 marks",
+        "Strong foundation in Mathematics and Physics",
+        "Proficient in C and C++ programming languages",
+        "Eager to embark on a dynamic career in technology"
+      ]
+    },
+    {
+      "title": "Rose Mary Matriculation Higher Secondary School, Palayamkottai",
+      "role": "Matriculation",
+      "timeline": "Apr 2007 - Apr 2008",
+      "grade": "443/500",
+      "description": "Mathematics and Science Enthusiast | Problem Solver | Aspiring Programmer",
+      "keyHighlights": [
+        "Strong problem-solving skills and logical thinking",
+        "Proficient in basic programming languages such as C and C++"
+      ]
+    }
+  ]
+} 

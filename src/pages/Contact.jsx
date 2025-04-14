@@ -6,7 +6,7 @@ import 'react-toastify/dist/ReactToastify.css';
 import { useState } from 'react';
 import axios from 'axios';
 import { BASE_URL } from '../utils/constants';
-import './Courses.css';  
+import '../stylesheets/Courses.css';  
 
 
 function Contact() {

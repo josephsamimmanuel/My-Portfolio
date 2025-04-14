@@ -15,7 +15,7 @@ function Header() {
         <p className={`${path === '/courses' && 'active'}`}> <Link to={'/courses'}>Education</Link> </p>
         <p className={`${path === '/contact' && 'active'}`}><Link to={'/contact'}>Contact</Link></p>
         <p className={`${path === 'https://github.com/josephsamimmanuel' && 'active'}`}> <a href="https://github.com/josephsamimmanuel">GitHub</a></p>
-        <p className={`${path === 'https://drive.google.com/file/d/12yZuVG3dhBlUSOrgcfNKVDwvBsJbtqsu/view?usp=sharing' && 'active'}`}> <a href="https://drive.google.com/file/d/12yZuVG3dhBlUSOrgcfNKVDwvBsJbtqsu/view?usp=sharing">Resume</a> </p>
+        <p className={`${path === 'https://drive.google.com/file/d/1UydauxT9-_P7YHLUNEK-6Jfiw1StPVn4/view?usp=drive_link' && 'active'}`}> <a href="https://drive.google.com/file/d/1UydauxT9-_P7YHLUNEK-6Jfiw1StPVn4/view?usp=drive_link">Resume</a> </p>
       </div>
       {showheader ? (<RiCloseCircleFill
         onClick={() => { setshowheader(!showheader) }} className='menu-icon position-fixed top=0 end-0'></RiCloseCircleFill>) :
