@@ -184,8 +184,10 @@ function Home() {
               <p className='font-size'>For Process Management</p>
               <span>nginx</span>
               <p className='font-size'>For Reverse Proxy</p>
-              <span>Netlify,Vercel</span>
+              <span>Netlify, Vercel, Render</span>
               <p className='font-size'>For one-click Deployment</p>
+              <span>Cloudinary</span>
+              <p className='font-size'>For Image and Video Storage</p>
             </div>
           </div>
 
