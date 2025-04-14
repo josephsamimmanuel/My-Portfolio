@@ -12,7 +12,6 @@ import './stylesheets/courosel.css'
 import './stylesheets/projects-courses.css'
 import AOS from 'aos';
 import 'aos/dist/aos.css'; // You can also use <link> for styles
-import Footer from './components/Footer';
 // ..
 AOS.init({
   duration:500

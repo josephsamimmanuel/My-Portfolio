@@ -2,7 +2,6 @@ import React, { useState } from 'react'
 import { RiMenu3Fill } from "react-icons/ri";
 import { RiCloseCircleFill } from "react-icons/ri";
 import { Link } from 'react-router-dom';
-import Contact from '../pages/Contact';
 
 function Header() {
   const [showheader, setshowheader] = useState(false)

@@ -47,7 +47,7 @@ function Home() {
     timer = setTimeout(handleTyping, typingSpeed);
 
     return () => clearTimeout(timer);
-  }, [displayText, isDeleting, techIndex]);
+  }, [displayText, isDeleting, techIndex, technologies]);
 
   return (
     <div>
