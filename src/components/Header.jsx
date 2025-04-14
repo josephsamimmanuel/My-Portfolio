@@ -27,7 +27,7 @@ function Header() {
         <li><p className={`${path === '/courses' && 'active'}`}> <Link to={'/courses'}>Education</Link> </p></li>
         <li><p className={`${path === '/contact' && 'active'}`}><Link to={'/contact'}>Contact</Link></p></li>
         <li><p className={`${path === 'https://github.com/josephsamimmanuel' && 'active'}`}> <a href="https://github.com/josephsamimmanuel">GitHub</a></p></li>
-        <li> <p className={`${path === 'https://drive.google.com/file/d/12yZuVG3dhBlUSOrgcfNKVDwvBsJbtqsu/view?usp=drive_link' && 'active'}`}> <a href="https://drive.google.com/file/d/12yZuVG3dhBlUSOrgcfNKVDwvBsJbtqsu/view?usp=drive_link">Resume</a> </p></li>
+        <li> <p className={`${path === 'https://drive.google.com/file/d/1UydauxT9-_P7YHLUNEK-6Jfiw1StPVn4/view?usp=drive_link' && 'active'}`}> <a href="https://drive.google.com/file/d/1UydauxT9-_P7YHLUNEK-6Jfiw1StPVn4/view?usp=drive_link">Resume</a> </p></li>
       </ul>
     </div>
   )
