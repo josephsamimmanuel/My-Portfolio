@@ -124,10 +124,10 @@ function Courses() {
         <div className="container-center row flex justify-content-center p-3">
           <h1 className='text-center p-4 text-decoration-underline pb-5'>Educational Journey</h1>
           {isLoading ? (
-            <div className="d-flex" style={{ minHeight: '200px' }}>
-              <div className="loader"></div>
-            </div>
-          ) : (
+          <div className="d-flex justify-content-center align-items-center" style={{ minHeight: '200px' }}>
+            <div className="loader"></div>
+          </div>
+        ) : (
             educationData.map((edu) => (
               <div key={edu._id} className="container-education col-md-5 m-4">
                 <h5 className='container-education-h5'>{edu.title}</h5>
