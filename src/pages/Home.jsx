@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react'
+import React, { useEffect, useMemo, useState } from 'react'
 import Header from '../components/Header'
 import Courosel from '../components/Courosel'
 import Footer from '../components/Footer'
@@ -8,7 +8,7 @@ function Home() {
   const [displayText, setDisplayText] = useState('');
   const [isDeleting, setIsDeleting] = useState(false);
   const [techIndex, setTechIndex] = useState(0);
-  const technologies = ['JavaScript', 'React.js', 'Node.js', 'Express.js', 'MongoDB', 'MySQL'];
+  const technologies = useMemo(() => ['JavaScript', 'React.js', 'Node.js', 'Express.js', 'MongoDB', 'MySQL'], []);
   const typingSpeed = 150;
   const deletingSpeed = 100;
   const pauseTime = 1000;
