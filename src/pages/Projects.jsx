@@ -69,8 +69,7 @@ function Projects() {
         <div className="container-center row flex justify-content-center p-3" >
           <h1 className='text-center p-4 text-decoration-underline pb-5'>Projects I have worked on...</h1>
           {projects.projects && projects.projects.map((project) => (
-            <div className="container-education col-md-5 mx-5">
-              <div key={project._id}>
+            <div key={project._id} className="container-education col-md-5 m-4">
                 <h5 className='container-education-h5'>{project.title}</h5>
                 <p className='container-education-p'>{project.timeline}</p>
                 <p><span style={{ fontWeight: "bold", color: "#52D857", textDecoration: "underline" }}>Role:</span> {project.role}</p>
@@ -99,7 +98,6 @@ function Projects() {
                     <p className='container-education-skills' key={index}>{ai}</p>
                   ))}
                 </div>
-              </div>
             </div>
           ))}
         </div>
