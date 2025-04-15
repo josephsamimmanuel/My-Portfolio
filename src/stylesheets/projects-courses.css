@@ -1,3 +1,44 @@
+/* Theme variables */
+:root {
+    --primary-green: #52D857;
+    --dark-blue: #001220;
+}
+
+/* Dark theme overrides */
+[data-theme='dark'] .container-education {
+    background-color: var(--dark-blue);
+    color: white;
+    box-shadow: 5px 5px 0px #000a14, -5px -5px 0px #002640;
+}
+
+[data-theme='dark'] .certification-h1 {
+    color: var(--primary-green);
+}
+[data-theme='dark'] .background-color-light{
+    background-color: #333333;
+}
+[data-theme='dark'] .project {
+    border: 1px solid var(--primary-green);
+    background-color: var(--dark-blue);
+}
+
+[data-theme='dark'] .project-content {
+    background-color: rgba(0, 18, 32, 0.95);
+}
+
+[data-theme='dark'] .courses-intro-content h1 {
+    -webkit-text-stroke-color: var(--primary-green);
+}
+
+[data-theme='dark'] .container-education-skills {
+    border-color: var(--primary-green);
+    color: var(--primary-green);
+}
+
+[data-theme='dark'] .container-education-h5 {
+    color: var(--primary-green);
+}
+
 .projects-intro .primary-button{
     background-color: blue;
     color: white;
@@ -52,6 +93,9 @@
     display: flex;
     align-items: center;
     justify-content: center;
+}
+.background-color-light{
+    background-color: #C2C6CA;
 }
 .courses-intro-content
 {

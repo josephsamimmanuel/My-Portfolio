@@ -1,8 +1,7 @@
 import React from 'react'
 import Header from '../components/Header'
 import Footer from '../components/Footer'
-import { ToastContainer, toast } from 'react-toastify';
-import 'react-toastify/dist/ReactToastify.css';
+import toast from 'react-hot-toast';
 import { useState } from 'react';
 import axios from 'axios';
 import { BASE_URL } from '../utils/constants';
@@ -49,18 +48,6 @@ function Contact() {
 
   return (
     <div>
-      <ToastContainer 
-        position="bottom-center"
-        autoClose={3000}
-        hideProgressBar={false}
-        newestOnTop={false}
-        closeOnClick
-        rtl={false}
-        pauseOnFocusLoss
-        draggable
-        pauseOnHover
-        theme="light"
-      />
       <Header></Header>
       <div className="container contact mt-5 pb-5">
         <div className="row pt-5">

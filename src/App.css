@@ -1,0 +1,135 @@
+/* Light theme variables */
+[data-theme='light'] {
+  --background-color: #EBECF0;
+  --text-color: #333;
+  --card-bg: #fff;
+  --border-color: #ddd;
+  --shadow-color: rgba(0, 0, 0, 0.1);
+  --button-bg: #52D857;
+  --button-text: #fff;
+  --header-bg: #001220;
+  --card-text: white;
+  --highlight-color: #52D857;
+}
+
+/* Dark theme variables */
+[data-theme='dark'] {
+  --background-color: #001220;
+  --text-color: #fff;
+  --card-bg: #0a1f30;
+  --border-color: #52D857;
+  --shadow-color: rgba(82, 216, 87, 0.2);
+  --button-bg: #52D857;
+  --button-text: #fff;
+  --header-bg: #000a14;
+  --card-text: #fff;
+  --highlight-color: #52D857;
+}
+
+/* Apply theme variables */
+body {
+  background-color: var(--background-color);
+  color: var(--text-color);
+  transition: all 0.3s ease;
+}
+
+.container-education {
+  background-color: var(--card-bg);
+  border: 1px solid var(--border-color);
+  box-shadow: 0 2px 4px var(--shadow-color);
+}
+
+/* Theme toggle icon styles */
+.theme-toggle {
+  position: fixed;
+  top: 35px;
+  right: 100px;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 8px;
+  transition: all 0.3s ease;
+}
+
+.theme-toggle svg {
+  width: 24px;
+  height: 24px;
+  color: var(--highlight-color);
+  transition: all 0.3s ease;
+}
+
+.theme-toggle:hover svg {
+  transform: rotate(360deg);
+  color: var(--highlight-color);
+}
+
+[data-theme='dark'] .theme-toggle svg {
+  color: var(--highlight-color);
+}
+
+/* Dark theme specific overrides */
+[data-theme='dark'] .container-education {
+  background-color: var(--card-bg);
+  border: 1px solid var(--border-color);
+  box-shadow: 0 2px 8px var(--shadow-color);
+  color: var(--card-text);
+}
+
+[data-theme='dark'] .container-education-h5 {
+  color: var(--highlight-color);
+}
+
+[data-theme='dark'] .container-education-skills {
+  border-color: var(--highlight-color);
+  color: var(--highlight-color);
+}
+
+[data-theme='dark'] .n-box2 {
+  background: linear-gradient(145deg, #001830, #001220);
+  box-shadow: 5px 5px 0px #000a14, -5px -5px 0px #002640;
+  color: var(--text-color);
+}
+
+[data-theme='dark'] .projects-intro {
+  color: var(--text-color);
+}
+
+[data-theme='dark'] .project {
+  border-color: var(--border-color);
+  background-color: var(--card-bg);
+}
+
+[data-theme='dark'] .project-content {
+  background-color: rgba(0, 18, 32, 0.9);
+}
+
+[data-theme='dark'] hr {
+  border-color: var(--highlight-color);
+  opacity: 0.2;
+}
+
+[data-theme='dark'] .font-bold {
+  color: var(--text-color);
+}
+
+/* Preserve existing styles */
+.container-education {
+  padding: 20px;
+  border-radius: 50px;
+  transition: all 0.3s ease;
+}
+
+@media (max-width: 768px) {
+  .theme-toggle {
+    top: 25px;
+    right: 70px;
+  }
+  .theme-toggle svg {
+    width: 20px;
+    height: 20px;
+  }
+}

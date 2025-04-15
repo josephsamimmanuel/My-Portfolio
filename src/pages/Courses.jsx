@@ -7,8 +7,7 @@ import { GrFormView } from "react-icons/gr";
 import { useState } from 'react';
 import axios from 'axios';
 import { BASE_URL } from '../utils/constants';
-import { ToastContainer, toast } from 'react-toastify';
-import 'react-toastify/dist/ReactToastify.css';
+import toast from 'react-hot-toast';
 import '../stylesheets/Courses.css';  
 
 function Courses() {
@@ -48,7 +47,6 @@ function Courses() {
 
   return (
     <div>
-      <ToastContainer position="bottom-center" autoClose={3000} />
       <Header></Header>
       <div className="courses-intro" style={{ backgroundImage: `url('./blob-scene-haikei1.svg')` }}>
         <div className='courses-intro-content'>
@@ -59,10 +57,10 @@ function Courses() {
           </div>
         </div>
       </div>
-      <div style={{backgroundColor:"#C2C6CA"}}>
+      <div className='background-color-light'>
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="#001220" fill-opacity="1" d="M0,192L26.7,181.3C53.3,171,107,149,160,144C213.3,139,267,149,320,170.7C373.3,192,427,224,480,234.7C533.3,245,587,235,640,224C693.3,213,747,203,800,181.3C853.3,160,907,128,960,128C1013.3,128,1067,160,1120,149.3C1173.3,139,1227,85,1280,80C1333.3,75,1387,117,1413,138.7L1440,160L1440,0L1413.3,0C1386.7,0,1333,0,1280,0C1226.7,0,1173,0,1120,0C1066.7,0,1013,0,960,0C906.7,0,853,0,800,0C746.7,0,693,0,640,0C586.7,0,533,0,480,0C426.7,0,373,0,320,0C266.7,0,213,0,160,0C106.7,0,53,0,27,0L0,0Z"></path></svg>
       </div>
-      <div style={{backgroundColor:"#C2C6CA"}}>
+      <div className='background-color-light'>
 
       <div className="certification row" id='education'>
         <h1 className='certification-h1'>Certifications</h1>
@@ -120,9 +118,9 @@ function Courses() {
         )}
       </div>
 
-      <div style={{backgroundColor:"#C2C6CA"}}>
+      <div className='background-color-light'>
         <div className="container-center row flex justify-content-center p-3">
-          <h1 className='text-center p-4 text-decoration-underline pb-5'>Educational Journey</h1>
+          <h1 className='certification-h1'>Educational Journey</h1>
           {isLoading ? (
           <div className="d-flex justify-content-center align-items-center" style={{ minHeight: '200px' }}>
             <div className="loader"></div>
@@ -221,7 +219,7 @@ function Courses() {
       </div>
 
       </div>
-      <div style={{backgroundColor:"#C2C6CA"}}>
+      <div className='background-color-light'>
       <Footer></Footer>
       </div>
     </div>

@@ -9,23 +9,26 @@ import frontenddata from './Frontenddata';
 import axios from 'axios';
 import { useState } from 'react';
 import { BASE_URL } from '../utils/constants';
-
-const skills = ["HTML", "HTML5", "CSS3", "Bootstrap", "TailwindCSS", "CSSFlexbox", "React.js", "Node.js", "Express.js", "version control", "GitHub", "DOM", "MongoDB", "MySQL", "API", "frontend developer", "backend developer", "Error Handling and Debugging", "Canva", "Microsoft Excel"]
-const others = ["VS Code", "Github", "Vercel", "Netlify", "Googling", "Basics of ChatGPT3.5"]
+import toast from 'react-hot-toast';
+import '../stylesheets/Courses.css';
 
 function Projects() {
   const [projects, setProjects] = useState([]);
-
+  const [loading, setLoading] = useState(true);
+  
   const fetchProjects = async () => {
+    setLoading(true);
     try {
       const response = await axios.get(`${BASE_URL}/get-projects`);
       setProjects(response.data.data);
+      toast.success('Projects fetched successfully');
     } catch (error) {
       console.error('Error fetching projects:', error);
+      toast.error('Error fetching projects');
+    } finally {
+      setLoading(false);
     }
   }
-
-  console.log(projects.projects);
 
   useEffect(() => {
     fetchProjects();
@@ -58,43 +61,49 @@ function Projects() {
         <hr />
       </div>
 
-      <div className="container-center row flex justify-content-center p-3" >
-        <h1 className='text-center p-4 text-decoration-underline pb-5'>Projects I have worked on...</h1>
-        {projects.projects && projects.projects.map((project) => (
-          <div className="container-education col-md-5 mx-5">
-            <div key={project._id}>
-              <h5 className='container-education-h5'>{project.title}</h5>
-              <p className='container-education-p'>{project.timeline}</p>
-              <p><span style={{ fontWeight: "bold", color: "#52D857", textDecoration: "underline" }}>Role:</span> {project.role}</p>
-              <p><span style={{ fontWeight: "bold", color: "#52D857", textDecoration: "underline" }}>Description:</span> {project.description}</p>
-              <p><span style={{ fontWeight: "bold", color: "#52D857", textDecoration: "underline" }}>Project Highlights:</span> {project.projectHighlights.join(", ")}</p>
+      {loading ? (
+        <div className="d-flex justify-content-center align-items-center" style={{ minHeight: '200px' }}>
+          <div className="loader"></div>
+        </div>
+      ) : (
+        <div className="container-center row flex justify-content-center p-3" >
+          <h1 className='text-center p-4 text-decoration-underline pb-5'>Projects I have worked on...</h1>
+          {projects.projects && projects.projects.map((project) => (
+            <div className="container-education col-md-5 mx-5">
+              <div key={project._id}>
+                <h5 className='container-education-h5'>{project.title}</h5>
+                <p className='container-education-p'>{project.timeline}</p>
+                <p><span style={{ fontWeight: "bold", color: "#52D857", textDecoration: "underline" }}>Role:</span> {project.role}</p>
+                <p><span style={{ fontWeight: "bold", color: "#52D857", textDecoration: "underline" }}>Description:</span> {project.description}</p>
+                <p><span style={{ fontWeight: "bold", color: "#52D857", textDecoration: "underline" }}>Project Highlights:</span> {project.projectHighlights.join(", ")}</p>
 
-              <p style={{ fontWeight: "bold", color: "#52D857", textDecoration: "underline" }}>Top Skills learned:</p>
-              <div>
+                <p style={{ fontWeight: "bold", color: "#52D857", textDecoration: "underline" }}>Top Skills learned:</p>
                 <div>
-                  {project.technologies.map((technology, index) => (
-                    <p className='container-education-skills' key={index}>{technology}</p>
+                  <div>
+                    {project.technologies.map((technology, index) => (
+                      <p className='container-education-skills' key={index}>{technology}</p>
+                    ))}
+                  </div>
+                </div>
+
+                <p style={{ fontWeight: "bold", color: "#52D857", textDecoration: "underline", paddingTop: "20px" }}>Others:</p>
+                <div>
+                  {project.tools.map((tool, index) => (
+                    <p className='container-education-skills' key={index}>{tool}</p>
+                  ))}
+                </div>
+
+                <p style={{ fontWeight: "bold", color: "#52D857", textDecoration: "underline", paddingTop: "20px" }}>AI:</p>
+                <div>
+                  {project.aiUsed.map((ai, index) => (
+                    <p className='container-education-skills' key={index}>{ai}</p>
                   ))}
                 </div>
               </div>
-
-              <p style={{ fontWeight: "bold", color: "#52D857", textDecoration: "underline", paddingTop: "20px" }}>Others:</p>
-              <div>
-                {project.tools.map((tool, index) => (
-                  <p className='container-education-skills' key={index}>{tool}</p>
-                ))}
-              </div>
-
-              <p style={{ fontWeight: "bold", color: "#52D857", textDecoration: "underline", paddingTop: "20px" }}>AI:</p>
-              <div>
-                {project.aiUsed.map((ai, index) => (
-                  <p className='container-education-skills' key={index}>{ai}</p>
-                ))}
-              </div>
             </div>
-          </div>
-        ))}
-      </div>
+          ))}
+        </div>
+      )}
 
       <div className="container projects-list pb-5" id='projects'>
         <hr />
