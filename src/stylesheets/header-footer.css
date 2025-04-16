@@ -190,12 +190,8 @@ input, textarea{
 }
 .footer-content p{
     font-size: 20px;
+}
 
-}
-.footer-content-p{
-    padding-bottom: 10px;
-    padding-top: 25px;
-}
 .footer-content svg{
     font-size: 2em;
     color: white;
@@ -204,6 +200,10 @@ input, textarea{
     color: #52D857;
     transform: scale(1.05);
     cursor: pointer;
+}
+.footer-content-div{
+    display: flex;
+    flex-direction: column;
 }
 
 @media (max-width: 760px) {
