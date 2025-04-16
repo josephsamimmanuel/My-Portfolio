@@ -1,11 +1,7 @@
 import React, { useEffect } from 'react'
 import Header from '../components/Header'
 import { FaLaptopCode } from "react-icons/fa";
-import projectsdata from './projectsdata';
 import Footer from '../components/Footer';
-import reactdata from './Reactdata';
-import nodedata from './nodedata';
-import frontenddata from './Frontenddata';
 import axios from 'axios';
 import { useState } from 'react';
 import { BASE_URL } from '../utils/constants';
@@ -15,7 +11,7 @@ import '../stylesheets/Courses.css';
 function Projects() {
   const [projects, setProjects] = useState([]);
   const [loading, setLoading] = useState(true);
-  
+
   const fetchProjects = async () => {
     setLoading(true);
     try {
@@ -69,14 +65,23 @@ function Projects() {
         <div className="container-center row flex justify-content-center p-3" >
           <h1 className='text-center p-4 text-decoration-underline pb-5'>Projects I have worked on...</h1>
           {projects.projects && projects.projects.map((project) => (
-            <div key={project._id} className="container-education col-md-5 m-4">
+            project.projectType === "official" && (
+              <div key={project._id} className="container-education col-md-5 m-4">
                 <h5 className='container-education-h5'>{project.title}</h5>
                 <p className='container-education-p'>{project.timeline}</p>
                 <p><span style={{ fontWeight: "bold", color: "#52D857", textDecoration: "underline" }}>Role:</span> {project.role}</p>
                 <p><span style={{ fontWeight: "bold", color: "#52D857", textDecoration: "underline" }}>Description:</span> {project.description}</p>
-                <p><span style={{ fontWeight: "bold", color: "#52D857", textDecoration: "underline" }}>Project Highlights:</span> {project.projectHighlights.join(", ")}</p>
+                <p><span style={{ fontWeight: "bold", color: "#52D857", textDecoration: "underline" }}>Project Highlights:</span></p>
+                <div style={{ paddingLeft: "20px" }}>
+                  {project.projectHighlights.map((highlight, index) => (
+                    <p key={index} style={{ margin: "5px 0" }}>
+                      <span style={{ color: "#52D857", marginRight: "8px" }}>-</span>
+                      {highlight}
+                    </p>
+                  ))}
+                </div>
 
-                <p style={{ fontWeight: "bold", color: "#52D857", textDecoration: "underline" }}>Top Skills learned:</p>
+                <p style={{ fontWeight: "bold", color: "#52D857", textDecoration: "underline" }}>Technologies Used:</p>
                 <div>
                   <div>
                     {project.technologies.map((technology, index) => (
@@ -85,124 +90,97 @@ function Projects() {
                   </div>
                 </div>
 
-                <p style={{ fontWeight: "bold", color: "#52D857", textDecoration: "underline", paddingTop: "20px" }}>Others:</p>
+                <p style={{ fontWeight: "bold", color: "#52D857", textDecoration: "underline", paddingTop: "20px" }}>Tools Used:</p>
                 <div>
                   {project.tools.map((tool, index) => (
                     <p className='container-education-skills' key={index}>{tool}</p>
                   ))}
                 </div>
 
-                <p style={{ fontWeight: "bold", color: "#52D857", textDecoration: "underline", paddingTop: "20px" }}>AI:</p>
+                <p style={{ fontWeight: "bold", color: "#52D857", textDecoration: "underline", paddingTop: "20px" }}>AI Used:</p>
                 <div>
                   {project.aiUsed.map((ai, index) => (
                     <p className='container-education-skills' key={index}>{ai}</p>
                   ))}
                 </div>
-            </div>
+              </div>
+            )
           ))}
         </div>
       )}
 
-      <div className="container projects-list pb-5" id='projects'>
+      <div className="container projects-list pb-1" id='projects'>
+        <h2 className='font-bold'>Projects on MERN stack</h2>
         <hr />
-        <h4 className='font-bold'>Projects on MERN stack</h4>
-        <hr />
-
-        <div className="row">
-          {
-            projectsdata.map(function (project) {
-              return (<div className="col-md-4">
-                <div className="position-relative project">
-                  <img src={project.image} alt="" />
-                  <div className="project-content">
-                    <h1>{project.title}</h1>
-                    <hr />
-                    <p>{project.description}</p>
-                    {/* <button className="primary-button projects-btn"><a href={project.link} className='white'>Get Started</a></button> */}
-                    <button className='primary-button'><a style={{ color: "black", textDecoration: "none" }} href={project.link}>View Me</a></button>
-                  </div>
-                </div>
-              </div>)
-            })}
-        </div>
-
       </div>
 
-      <div className="container projects-list pb-5" id='projects'>
-
-        <h4 className='font-bold'>Projects on NodeJs</h4>
-        <hr />
-
-        <div className="row">
-          {
-            nodedata.map(function (project) {
-              return (<div className="col-md-4">
-                <div className="position-relative project">
-                  <img src={project.image} alt="" />
-                  <div className="project-content">
-                    <h4>{project.title}</h4>
-                    <hr />
-                    <p>{project.description}</p>
-                    {/* <button className="primary-button projects-btn"><a href={project.link} className='white'>Get Started</a></button> */}
-                    <button className='primary-button'><a style={{ color: "black", textDecoration: "none" }} href={project.link}>View Me</a></button>
-                  </div>
-                </div>
-              </div>)
-            })}
+      {loading ? (
+        <div className="d-flex justify-content-center align-items-center" style={{ minHeight: '200px' }}>
+          <div className="loader"></div>
         </div>
+      ) : (
+      <div className="container-center row flex justify-content-center p-3" >
+        <h1 className='text-center p-4 text-decoration-underline pb-5'>Some of my Projects..</h1>
+        {projects.projects && projects.projects.map((project) => (
+          project.projectType === "personal" && (
+            <div key={project._id} className="container-education col-md-5 m-4">
+              <h5 className='container-education-h5'>{project.title}</h5>
+              <div className='project-timeline-role'>
+                <p className='container-education-p'>{project.timeline}</p>
+                <p><span style={{ fontWeight: "bold", color: "#52D857", textDecoration: "underline" }}>Role:</span> {project.role}</p>
+              </div>
 
-      </div>
-
-      <div className="container projects-list pb-5" id='projects'>
-
-        <h4 className='font-bold'>Projects on ReactJs</h4>
-        <hr />
-
-        <div className="row">
-          {
-            reactdata.map(function (project) {
-              return (<div className="col-md-4">
-                <div className="position-relative project">
-                  <img src={project.image} alt="" />
-                  <div className="project-content">
-                    <h1>{project.title}</h1>
-                    <hr />
-                    <p>{project.description}</p>
-                    {/* <button className="primary-button projects-btn"><a href={project.link} className='white'>Get Started</a></button> */}
-                    <button className='primary-button'><a style={{ color: "black", textDecoration: "none" }} href={project.link}>View Me</a></button>
-                  </div>
+              <div className='project-image-container'>
+                <img className='project-image' src={project.image} alt="" />
+                <div className='project-image-overlay'>
+                  <button onClick={() => {
+                    console.log("project.link", project.link);
+                    return (
+                      window.open(project.link, '_blank')
+                    )
+                  }} 
+                    className='view-button'>View</button>
                 </div>
-              </div>)
-            })}
-        </div>
+              </div>
 
-      </div>
+              <p><span style={{ fontWeight: "bold", color: "#52D857", textDecoration: "underline" }}>Description:</span> {project.description}</p>
+              <p><span style={{ fontWeight: "bold", color: "#52D857", textDecoration: "underline" }}>Project Highlights:</span></p>
+              <div style={{ paddingLeft: "20px" }}>
+                {project.projectHighlights.map((highlight, index) => (
+                  <p key={index} style={{ margin: "5px 0" }}>
+                    <span style={{ color: "#52D857", marginRight: "8px" }}>-</span>
+                    {highlight}
+                  </p>
+                ))}
+              </div>
 
-      <div className="container projects-list pb-5" id='projects'>
-
-        <h4 className='font-bold'>Projects on FrontEnd</h4>
-        <hr />
-
-        <div className="row">
-          {
-            frontenddata.map(function (project) {
-              return (<div className="col-md-4">
-                <div className="position-relative project">
-                  <img src={project.image} alt="" />
-                  <div className="project-content">
-                    <h1>{project.title}</h1>
-                    <hr />
-                    <p>{project.description}</p>
-                    {/* <button className="primary-button projects-btn"><a href={project.link} className='white'>Get Started</a></button> */}
-                    <button className='primary-button'><a style={{ color: "black", textDecoration: "none" }} href={project.link}>View Me</a></button>
-                  </div>
+              <p style={{ fontWeight: "bold", color: "#52D857", textDecoration: "underline" }}>Technologies Used:</p>
+              <div>
+                <div>
+                  {project.technologies.map((technology, index) => (
+                    <p className='container-education-skills' key={index}>{technology}</p>
+                  ))}
                 </div>
-              </div>)
-            })}
-        </div>
+              </div>
 
+              <p style={{ fontWeight: "bold", color: "#52D857", textDecoration: "underline", paddingTop: "20px" }}>Tools Used:</p>
+              <div>
+                {project.tools.map((tool, index) => (
+                  <p className='container-education-skills' key={index}>{tool}</p>
+                ))}
+              </div>
+
+              <p style={{ fontWeight: "bold", color: "#52D857", textDecoration: "underline", paddingTop: "20px" }}>AI Used:</p>
+              <div>
+                {project.aiUsed.map((ai, index) => (
+                  <p className='container-education-skills' key={index}>{ai}</p>
+                ))}
+              </div>
+            </div>
+          )
+        ))}
       </div>
-
+      )}
       <Footer></Footer>
     </div>
   )
