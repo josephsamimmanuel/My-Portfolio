@@ -1,7 +1,28 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import { FaFacebook, FaGithub, FaInstagram, FaLinkedin } from 'react-icons/fa'
+import axios from 'axios';
+import { BASE_URL } from '../utils/constants';
 
 function Footer() {
+  const [necessaryLinks, setNecessaryLinks] = useState([]);
+
+  useEffect(() => {
+    fetchNecessaryLinks();
+  }, []);
+
+  const fetchNecessaryLinks = async () => {
+    try {
+      const response = await axios.get(`${BASE_URL}/get-necessary-links`);
+      if (response) {
+        setNecessaryLinks(response.data.data[0]);
+      }else{
+        console.log("No necessary links found");
+      }
+    } catch (error) {
+      console.error('Error fetching necessary links:', error);
+    }
+  };
+
   return (
     <div>
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
@@ -17,10 +38,10 @@ function Footer() {
 
             <hr />
             <div className='d-flex justify-content-between'>
-              <a href="https://www.instagram.com/josesamimmanuel/"> <FaInstagram></FaInstagram>  </a>
-              <a href="https://www.facebook.com/joseph.immanuel.12/"><FaFacebook></FaFacebook></a>
-              <a href="https://www.linkedin.com/in/josephsamimmanuel/"><FaLinkedin></FaLinkedin></a>
-              <a href="https://github.com/josephsamimmanuel"> <FaGithub></FaGithub></a>
+              <a href={`${necessaryLinks.instagramLink}`}> <FaInstagram></FaInstagram>  </a>
+              <a href={`${necessaryLinks.facebookLink}`}><FaFacebook></FaFacebook></a>
+              <a href={`${necessaryLinks.linkedinLink}`}><FaLinkedin></FaLinkedin></a>
+              <a href={`${necessaryLinks.githubLink}`}> <FaGithub></FaGithub></a>
             </div>
             <hr />
             <p> &copy; {new Date().getFullYear()} Developed by Joseph Sam Immanuel </p>
