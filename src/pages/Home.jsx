@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react'
+import React, { useEffect, useMemo, useState } from 'react'
 import Header from '../components/Header'
 import Courosel from '../components/Courosel'
 import Footer from '../components/Footer'
@@ -8,7 +8,7 @@ function Home() {
   const [displayText, setDisplayText] = useState('');
   const [isDeleting, setIsDeleting] = useState(false);
   const [techIndex, setTechIndex] = useState(0);
-  const technologies = ['JavaScript', 'React.js', 'Node.js', 'Express.js', 'MongoDB', 'MySQL'];
+  const technologies = useMemo(() => ['JavaScript', 'React.js', 'Node.js', 'Express.js', 'MongoDB', 'MySQL'], []);
   const typingSpeed = 150;
   const deletingSpeed = 100;
   const pauseTime = 1000;
@@ -47,7 +47,7 @@ function Home() {
     timer = setTimeout(handleTyping, typingSpeed);
 
     return () => clearTimeout(timer);
-  }, [displayText, isDeleting, techIndex]);
+  }, [displayText, isDeleting, techIndex, technologies]);
 
   return (
     <div>
@@ -184,8 +184,10 @@ function Home() {
               <p className='font-size'>For Process Management</p>
               <span>nginx</span>
               <p className='font-size'>For Reverse Proxy</p>
-              <span>Netlify,Vercel</span>
+              <span>Netlify, Vercel, Render</span>
               <p className='font-size'>For one-click Deployment</p>
+              <span>Cloudinary</span>
+              <p className='font-size'>For Image and Video Storage</p>
             </div>
           </div>
 
@@ -193,6 +195,12 @@ function Home() {
             <div className=' text-end'>
               <h3 className='font-bold'>3rd Party Services</h3>
               <hr />
+              <span>GoDaddy</span>
+              <p className='font-size'>For Domain Registration</p>
+              <span>Cloudflare</span>
+              <p className='font-size'>For DNS and SSL Certificates</p>
+              <span>Razorpay</span>
+              <p className='font-size'>For Payment Gateway</p>
               <span>Stripe</span>
               <p className='font-size'>For Payment Gateway</p>
               <span>Twilio</span>
@@ -205,14 +213,14 @@ function Home() {
       <div className="container-visionary">
         <div className='container-visionary-title'>
           <h4>Vision</h4>
-          <p>Launching my career: Gaining a Fresh Perspective on Full Stack Development</p>
+          <p>Full Stack Developer with a passion for building scalable and efficient web applications.</p>
         </div>
         <div className= "container-visionary-one">
         <div>
           <div>
             <div className='n-box2 p-5 font-bold'>
               <h6 className='container-visionary-h6'>About Me</h6>
-              <i style={{ color: `black` }} className="fa-solid fa-quote-left "></i>
+              <i className="fa-solid fa-quote-left "></i>
               <p className='container-visionary-p'>I'm a React.js Frontend Developer with 8+ months of experience, skilled in creating responsive UIs and managing complex states using Redux and Redux-Saga. I've expanded into backend development with Node.js and MongoDB, and have basic deployment knowledge with AWS EC2, Nginx, and PM2. I'm passionate about learning, coding best practices, and team collaboration.</p>
             </div>
           </div>
@@ -222,7 +230,7 @@ function Home() {
           <div >
             <div className='n-box2 p-5 font-bold'>
               <h6 className='container-visionary-h6'>Reason to Hire Me</h6>
-              <i style={{ color: `black` }} className="fa-solid fa-quote-left "></i>
+              <i className="fa-solid fa-quote-left "></i>
               <p className='container-visionary-p'>I bring a solid blend of frontend expertise and backend understanding, making me a capable contributor to full-stack projects. I’m quick to learn, proactive in solving problems, and excited to collaborate with dynamic teams. My passion for clean code, performance optimization, and continuous learning makes me a valuable asset to any development team.</p>
             </div>
           </div>

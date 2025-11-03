@@ -1,3 +1,44 @@
+/* Theme variables */
+:root {
+    --primary-green: #52D857;
+    --dark-blue: #001220;
+}
+
+/* Dark theme overrides */
+[data-theme='dark'] .container-education {
+    background-color: var(--dark-blue);
+    color: white;
+    box-shadow: 5px 5px 0px #000a14, -5px -5px 0px #002640;
+}
+
+[data-theme='dark'] .certification-h1 {
+    color: var(--primary-green);
+}
+[data-theme='dark'] .background-color-light{
+    background-color: #333333;
+}
+[data-theme='dark'] .project {
+    border: 1px solid var(--primary-green);
+    background-color: var(--dark-blue);
+}
+
+[data-theme='dark'] .project-content {
+    background-color: rgba(0, 18, 32, 0.95);
+}
+
+[data-theme='dark'] .courses-intro-content h1 {
+    -webkit-text-stroke-color: var(--primary-green);
+}
+
+[data-theme='dark'] .container-education-skills {
+    border-color: var(--primary-green);
+    color: var(--primary-green);
+}
+
+[data-theme='dark'] .container-education-h5 {
+    color: var(--primary-green);
+}
+
 .projects-intro .primary-button{
     background-color: blue;
     color: white;
@@ -17,6 +58,59 @@
     height: 220px;
     width: 100%;
 }
+.project-image-container {
+    position: relative;
+    margin-bottom: 20px;
+}
+
+.project-image {
+    height: 220px;
+    width: 100%;
+    border-radius: 10px;
+    border: 1px solid #52D857;
+    box-shadow: 5px 5px 0px #52D857, -5px -5px 0px #F76100;
+    transition: all 0.5s;
+    padding: 10px;
+    background-color: #E2E3E6;
+}
+
+.project-image-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(128, 128, 128, 0.8);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    border-radius: 10px;
+}
+
+.project-image-container:hover .project-image-overlay {
+    opacity: 1;
+}
+
+.view-button {
+    position: absolute;
+    bottom: 10px;
+    right: 250px;
+    padding: 10px 20px;
+    background-color: #52D857;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: transform 0.2s ease;
+}
+
+.view-button:hover {
+    transform: scale(1.05);
+}
+
 .project:hover > .project-content{
     opacity: 0.8;
     transform: scale(1.03);
@@ -37,6 +131,7 @@
     background-color: black;
     opacity: 0.8;
     height: 100%;
+    width: 100%;
     color: white;
     font-weight: 500;
     border-radius: 10px;
@@ -51,6 +146,9 @@
     display: flex;
     align-items: center;
     justify-content: center;
+}
+.background-color-light{
+    background-color: #C2C6CA;
 }
 .courses-intro-content
 {
@@ -77,6 +175,9 @@
     background-color: #001220;
     box-shadow:  5px 5px 0px #d6d7da,
                  -5px -5px 0px #ffffff;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
 }
 .container-education-p{
     color: white;
@@ -107,8 +208,17 @@
 .project-content svg{
     font-size: 2em;
 }
-
-
+.upload-controls{
+    display: flex;
+    justify-content: spa;
+    align-items: center;
+    gap: 10px;
+}
+.project-timeline-role{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
 @keyframes project-animation{
     0%{
         transform: rotate(-5deg);
@@ -168,5 +278,25 @@
     .container-center{
         margin-left: 1px;
         margin-right: 1px;
+    }
+    .project-description{
+        display: none;
+    }
+    .project-image-container{
+        display: flex;
+        flex-direction: column;
+    }
+    .view-button {
+        position: absolute;
+        bottom: 10px;
+        right: 110px;
+        padding: 5px 10px;
+        background-color: #52D857;
+        color: white;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        font-weight: bold;
+        transition: transform 0.2s ease;
     }
 }

@@ -44,3 +44,15 @@ background: linear-gradient(145deg, #d4d4d8, #fbfdff);
 box-shadow:  5px 5px 0px #d6d7da,
              -5px -5px 0px #ffffff;
 }
+/* Global.css */
+:root {
+  --background-color-light: #f8f8f8;
+  --text-color-light: #333;
+  --background-color-dark: #333;
+  --text-color-dark: #f8f8f8;
+}
+
+[data-theme="dark"] {
+  background-color: var(--background-color-dark);
+  color: var(--text-color-dark);
+}
