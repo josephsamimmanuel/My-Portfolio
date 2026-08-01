@@ -7,7 +7,6 @@ import axios from 'axios';
 import { BASE_URL } from '../utils/constants';
 import '../stylesheets/Courses.css';  
 
-
 function Contact() {
   const [name, setName] = useState('');
   const [subject, setSubject] = useState('');

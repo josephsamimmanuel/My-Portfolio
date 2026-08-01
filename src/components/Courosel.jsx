@@ -4,7 +4,6 @@ import { SiTailwindcss } from "react-icons/si";
 import { FaGithub } from "react-icons/fa";
 import { SiMysql } from "react-icons/si";
 
-
 function Courosel() {
   return (
     <div>
@@ -44,13 +43,7 @@ function Courosel() {
           <SiMysql color='#F29221'></SiMysql>
         </span>
         </div>
-
-
-
         </div>
-
-
-
     </div>
   )
 }
