@@ -30,6 +30,44 @@ function Projects() {
     fetchProjects();
   }, []);
 
+  const getProjectDateValue = (project) => {
+    let timelineTimestamp = 0;
+    if (project.timeline) {
+      const monthYearMatches = project.timeline.match(/([A-Za-z]+\s+\d{4})/g);
+      if (monthYearMatches && monthYearMatches.length > 0) {
+        const startDate = new Date(monthYearMatches[0]);
+        if (!isNaN(startDate.getTime())) {
+          timelineTimestamp = startDate.getTime();
+        }
+      }
+    }
+
+    let createdTimestamp = 0;
+    if (project.createdAt) {
+      const createdDate = new Date(project.createdAt);
+      if (!isNaN(createdDate.getTime())) {
+        createdTimestamp = createdDate.getTime();
+      }
+    }
+
+    return { timelineTimestamp, createdTimestamp };
+  };
+
+  const sortProjectsNewestToOldest = (projectList) => {
+    if (!Array.isArray(projectList)) return [];
+    return [...projectList].sort((a, b) => {
+      const dateA = getProjectDateValue(a);
+      const dateB = getProjectDateValue(b);
+
+      if (dateB.timelineTimestamp !== dateA.timelineTimestamp) {
+        return dateB.timelineTimestamp - dateA.timelineTimestamp;
+      }
+      return dateB.createdTimestamp - dateA.createdTimestamp;
+    });
+  };
+
+  const sortedProjects = sortProjectsNewestToOldest(projects.projects);
+
   return (
     <div>
       <Header></Header>
@@ -62,46 +100,64 @@ function Projects() {
           <div className="loader"></div>
         </div>
       ) : (
-        <div className="container-center row flex justify-content-center p-3" >
-          <h1 className='text-center p-4 text-decoration-underline pb-5'>Projects I have worked on...</h1>
-          {projects.projects && projects.projects.map((project) => (
+        <div className="container row g-4 p-3 mx-auto" >
+          <h1 className='text-center p-4 text-decoration-underline pb-3'>Projects I have worked on...</h1>
+          {sortedProjects.map((project) => (
             project.projectType === "official" && (
-              <div key={project._id} className="container-education col-md-5 m-4">
-                <h5 className='container-education-h5'>{project.title}</h5>
-                <p className='container-education-p'>{project.timeline}</p>
-                <p><span style={{ fontWeight: "bold", color: "#52D857", textDecoration: "underline" }}>Role:</span> {project.role}</p>
-                <p><span style={{ fontWeight: "bold", color: "#52D857", textDecoration: "underline" }}>Description:</span> {project.description}</p>
-                <p><span style={{ fontWeight: "bold", color: "#52D857", textDecoration: "underline" }}>Project Highlights:</span></p>
-                <div style={{ paddingLeft: "20px" }}>
-                  {project.projectHighlights.map((highlight, index) => (
-                    <p key={index} style={{ margin: "5px 0" }}>
-                      <span style={{ color: "#52D857", marginRight: "8px" }}>-</span>
-                      {highlight}
-                    </p>
-                  ))}
-                </div>
+              <div key={project._id} className="col-12 col-md-6">
+                <div className="container-education h-100">
+                  <h5 className='container-education-h5'>{project.title}</h5>
+                  <p className='container-education-p'>{project.timeline}</p>
+                  <p><span style={{ fontWeight: "bold", color: "#52D857", textDecoration: "underline" }}>Role:</span> {project.role}</p>
+                  <p><span style={{ fontWeight: "bold", color: "#52D857", textDecoration: "underline" }}>Description:</span> {project.description}</p>
+                  {project.projectHighlights && project.projectHighlights.length > 0 && (
+                    <>
+                      <p><span style={{ fontWeight: "bold", color: "#52D857", textDecoration: "underline" }}>Project Highlights:</span></p>
+                      <div style={{ paddingLeft: "20px" }}>
+                        {project.projectHighlights.map((highlight, index) => (
+                          <p key={index} style={{ margin: "5px 0" }}>
+                            <span style={{ color: "#52D857", marginRight: "8px" }}>-</span>
+                            {highlight}
+                          </p>
+                        ))}
+                      </div>
+                    </>
+                  )}
 
-                <p style={{ fontWeight: "bold", color: "#52D857", textDecoration: "underline" }}>Technologies Used:</p>
-                <div>
-                  <div>
-                    {project.technologies.map((technology, index) => (
-                      <p className='container-education-skills' key={index}>{technology}</p>
-                    ))}
-                  </div>
-                </div>
+                  {project.technologies && project.technologies.length > 0 && (
+                    <>
+                      <p style={{ fontWeight: "bold", color: "#52D857", textDecoration: "underline" }}>Technologies Used:</p>
+                      <div>
+                        <div>
+                          {project.technologies.map((technology, index) => (
+                            <p className='container-education-skills' key={index}>{technology}</p>
+                          ))}
+                        </div>
+                      </div>
+                    </>
+                  )}
 
-                <p style={{ fontWeight: "bold", color: "#52D857", textDecoration: "underline", paddingTop: "20px" }}>Tools Used:</p>
-                <div>
-                  {project.tools.map((tool, index) => (
-                    <p className='container-education-skills' key={index}>{tool}</p>
-                  ))}
-                </div>
+                  {project.tools && project.tools.length > 0 && (
+                    <>
+                      <p style={{ fontWeight: "bold", color: "#52D857", textDecoration: "underline", paddingTop: "20px" }}>Tools Used:</p>
+                      <div>
+                        {project.tools.map((tool, index) => (
+                          <p className='container-education-skills' key={index}>{tool}</p>
+                        ))}
+                      </div>
+                    </>
+                  )}
 
-                <p style={{ fontWeight: "bold", color: "#52D857", textDecoration: "underline", paddingTop: "20px" }}>AI Used:</p>
-                <div>
-                  {project.aiUsed.map((ai, index) => (
-                    <p className='container-education-skills' key={index}>{ai}</p>
-                  ))}
+                  {project.aiUsed && project.aiUsed.length > 0 && (
+                    <>
+                      <p style={{ fontWeight: "bold", color: "#52D857", textDecoration: "underline", paddingTop: "20px" }}>AI Used:</p>
+                      <div>
+                        {project.aiUsed.map((ai, index) => (
+                          <p className='container-education-skills' key={index}>{ai}</p>
+                        ))}
+                      </div>
+                    </>
+                  )}
                 </div>
               </div>
             )
@@ -119,62 +175,80 @@ function Projects() {
           <div className="loader"></div>
         </div>
       ) : (
-      <div className="container-center row flex justify-content-center p-3" >
-        <h1 className='text-center p-4 text-decoration-underline pb-5'>Some of my Projects..</h1>
-        {projects.projects && projects.projects.map((project) => (
+      <div className="container row g-4 p-3 mx-auto" >
+        <h1 className='text-center p-4 text-decoration-underline pb-3'>Some of my Projects..</h1>
+        {sortedProjects.map((project) => (
           project.projectType === "personal" && (
-            <div key={project._id} className="container-education col-md-5 m-4">
-              <h5 className='container-education-h5'>{project.title}</h5>
-              <div className='project-timeline-role'>
-                <p className='container-education-p'>{project.timeline}</p>
-                <p><span style={{ fontWeight: "bold", color: "#52D857", textDecoration: "underline" }}>Role:</span> {project.role}</p>
-              </div>
-
-              <div className='project-image-container'>
-                <img className='project-image' src={project.image} alt="" />
-                <div className='project-image-overlay'>
-                  <button onClick={() => {
-                    console.log("project.link", project.link);
-                    return (
-                      window.open(project.link, '_blank')
-                    )
-                  }} 
-                    className='view-button'>View</button>
+            <div key={project._id} className="col-12 col-md-6">
+              <div className="container-education h-100">
+                <h5 className='container-education-h5'>{project.title}</h5>
+                <div className='project-timeline-role'>
+                  <p className='container-education-p'>{project.timeline}</p>
+                  <p><span style={{ fontWeight: "bold", color: "#52D857", textDecoration: "underline" }}>Role:</span> {project.role}</p>
                 </div>
-              </div>
 
-              <p><span style={{ fontWeight: "bold", color: "#52D857", textDecoration: "underline" }}>Description:</span> {project.description}</p>
-              <p><span style={{ fontWeight: "bold", color: "#52D857", textDecoration: "underline" }}>Project Highlights:</span></p>
-              <div style={{ paddingLeft: "20px" }}>
-                {project.projectHighlights.map((highlight, index) => (
-                  <p key={index} style={{ margin: "5px 0" }}>
-                    <span style={{ color: "#52D857", marginRight: "8px" }}>-</span>
-                    {highlight}
-                  </p>
-                ))}
-              </div>
-
-              <p style={{ fontWeight: "bold", color: "#52D857", textDecoration: "underline" }}>Technologies Used:</p>
-              <div>
-                <div>
-                  {project.technologies.map((technology, index) => (
-                    <p className='container-education-skills' key={index}>{technology}</p>
-                  ))}
+                <div className='project-image-container'>
+                  <img className='project-image' src={project.image} alt="" />
+                  <div className='project-image-overlay'>
+                    <button onClick={() => {
+                      console.log("project.link", project.link);
+                      return (
+                        window.open(project.link, '_blank')
+                      )
+                    }} 
+                      className='view-button'>View</button>
+                  </div>
                 </div>
-              </div>
 
-              <p style={{ fontWeight: "bold", color: "#52D857", textDecoration: "underline", paddingTop: "20px" }}>Tools Used:</p>
-              <div>
-                {project.tools.map((tool, index) => (
-                  <p className='container-education-skills' key={index}>{tool}</p>
-                ))}
-              </div>
+                <p><span style={{ fontWeight: "bold", color: "#52D857", textDecoration: "underline" }}>Description:</span> {project.description}</p>
+                {project.projectHighlights && project.projectHighlights.length > 0 && (
+                  <>
+                    <p><span style={{ fontWeight: "bold", color: "#52D857", textDecoration: "underline" }}>Project Highlights:</span></p>
+                    <div style={{ paddingLeft: "20px" }}>
+                      {project.projectHighlights.map((highlight, index) => (
+                        <p key={index} style={{ margin: "5px 0" }}>
+                          <span style={{ color: "#52D857", marginRight: "8px" }}>-</span>
+                          {highlight}
+                        </p>
+                      ))}
+                    </div>
+                  </>
+                )}
 
-              <p style={{ fontWeight: "bold", color: "#52D857", textDecoration: "underline", paddingTop: "20px" }}>AI Used:</p>
-              <div>
-                {project.aiUsed.map((ai, index) => (
-                  <p className='container-education-skills' key={index}>{ai}</p>
-                ))}
+                {project.technologies && project.technologies.length > 0 && (
+                  <>
+                    <p style={{ fontWeight: "bold", color: "#52D857", textDecoration: "underline" }}>Technologies Used:</p>
+                    <div>
+                      <div>
+                        {project.technologies.map((technology, index) => (
+                          <p className='container-education-skills' key={index}>{technology}</p>
+                        ))}
+                      </div>
+                    </div>
+                  </>
+                )}
+
+                {project.tools && project.tools.length > 0 && (
+                  <>
+                    <p style={{ fontWeight: "bold", color: "#52D857", textDecoration: "underline", paddingTop: "20px" }}>Tools Used:</p>
+                    <div>
+                      {project.tools.map((tool, index) => (
+                        <p className='container-education-skills' key={index}>{tool}</p>
+                      ))}
+                    </div>
+                  </>
+                )}
+
+                {project.aiUsed && project.aiUsed.length > 0 && (
+                  <>
+                    <p style={{ fontWeight: "bold", color: "#52D857", textDecoration: "underline", paddingTop: "20px" }}>AI Used:</p>
+                    <div>
+                      {project.aiUsed.map((ai, index) => (
+                        <p className='container-education-skills' key={index}>{ai}</p>
+                      ))}
+                    </div>
+                  </>
+                )}
               </div>
             </div>
           )
